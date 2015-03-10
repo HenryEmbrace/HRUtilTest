@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 
 typedef enum{
-    KLRoundTypeTop     =   0,
-    KLRoundTypeLeft,
-    KLRoundTypeRight,
-    KLRoundTypeBottom,
-    KLRoundTypeAll,
-    KLRoundTypeNone
-}KLRoundType;
+    HRRoundTypeTop     =   0,
+    HRRoundTypeLeft,
+    HRRoundTypeRight,
+    HRRoundTypeBottom,
+    HRRoundTypeAll,
+    HRRoundTypeNone
+}HRRoundType;
 
 @interface HRRoundView : UIView
-@property(nonatomic,assign)KLRoundType  roundType;
+@property(nonatomic,assign)HRRoundType  roundType;
 
 @end

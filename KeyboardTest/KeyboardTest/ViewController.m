@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "HRInputView.h"
+#import "HRChatViewController.h"
 
 @interface ViewController ()<HRBeacherInputDelegate>
 {
@@ -33,6 +34,19 @@
     [contents setFrame:CGRectMake(0, 40, [UIScreen mainScreen].bounds.size.width, 260)];
     [contents setBackgroundColor:[UIColor grayColor]];
     [self.view addSubview:contents];
+    
+    UIButton    *jumpButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [jumpButton setTitle:@"聊天" forState:UIControlStateNormal];
+    [jumpButton setFrame:CGRectMake(0, 20, 60, 30)];
+    [self.view addSubview:jumpButton];
+    [jumpButton addTarget:self action:@selector(gotoChatRoom) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)gotoChatRoom{
+    HRChatViewController    *chatVC = [HRChatViewController new];
+    [self presentViewController:chatVC animated:YES completion:^{
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

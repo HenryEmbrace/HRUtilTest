@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0914E11AAE936F00232638 /* HRBlockAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0914E01AAE936F00232638 /* HRBlockAlertView.m */; };
 		7E87B10D1AA1DFD90029AB36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B10C1AA1DFD90029AB36 /* main.m */; };
 		7E87B1101AA1DFD90029AB36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B10F1AA1DFD90029AB36 /* AppDelegate.m */; };
 		7E87B1131AA1DFD90029AB36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B1121AA1DFD90029AB36 /* ViewController.m */; };
@@ -19,6 +20,9 @@
 		7E87B1D71AA941DB0029AB36 /* HRUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B1D61AA941DB0029AB36 /* HRUtil.m */; };
 		7E87B1DA1AA943080029AB36 /* HRRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B1D91AA943080029AB36 /* HRRoundView.m */; };
 		7E87B1DE1AA946260029AB36 /* HRCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B1DD1AA946260029AB36 /* HRCameraView.m */; };
+		7EC0EACF1AAD467E00D961FD /* HRChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0EACE1AAD467E00D961FD /* HRChatViewController.m */; };
+		7EC0EAD21AAD46C300D961FD /* HRChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0EAD11AAD46C300D961FD /* HRChatCell.m */; };
+		7EC0EAD51AAD578300D961FD /* HRRoundTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0EAD41AAD578300D961FD /* HRRoundTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E0914DF1AAE936F00232638 /* HRBlockAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRBlockAlertView.h; sourceTree = "<group>"; };
+		7E0914E01AAE936F00232638 /* HRBlockAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRBlockAlertView.m; sourceTree = "<group>"; };
 		7E87B1071AA1DFD90029AB36 /* KeyboardTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E87B10B1AA1DFD90029AB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E87B10C1AA1DFD90029AB36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +60,12 @@
 		7E87B1D91AA943080029AB36 /* HRRoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRRoundView.m; sourceTree = "<group>"; };
 		7E87B1DC1AA946260029AB36 /* HRCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRCameraView.h; sourceTree = "<group>"; };
 		7E87B1DD1AA946260029AB36 /* HRCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRCameraView.m; sourceTree = "<group>"; };
+		7EC0EACD1AAD467E00D961FD /* HRChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatViewController.h; sourceTree = "<group>"; };
+		7EC0EACE1AAD467E00D961FD /* HRChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChatViewController.m; sourceTree = "<group>"; };
+		7EC0EAD01AAD46C300D961FD /* HRChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatCell.h; sourceTree = "<group>"; };
+		7EC0EAD11AAD46C300D961FD /* HRChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChatCell.m; sourceTree = "<group>"; };
+		7EC0EAD31AAD578300D961FD /* HRRoundTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRRoundTextView.h; sourceTree = "<group>"; };
+		7EC0EAD41AAD578300D961FD /* HRRoundTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRRoundTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +118,10 @@
 				7E87B10A1AA1DFD90029AB36 /* Supporting Files */,
 				7E87B1D51AA941DB0029AB36 /* HRUtil.h */,
 				7E87B1D61AA941DB0029AB36 /* HRUtil.m */,
+				7EC0EACD1AAD467E00D961FD /* HRChatViewController.h */,
+				7EC0EACE1AAD467E00D961FD /* HRChatViewController.m */,
+				7EC0EAD01AAD46C300D961FD /* HRChatCell.h */,
+				7EC0EAD11AAD46C300D961FD /* HRChatCell.m */,
 			);
 			path = KeyboardTest;
 			sourceTree = "<group>";
@@ -140,12 +156,16 @@
 		7E87B1DB1AA9432F0029AB36 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				7EC0EAD31AAD578300D961FD /* HRRoundTextView.h */,
+				7EC0EAD41AAD578300D961FD /* HRRoundTextView.m */,
 				7E87B1D81AA943080029AB36 /* HRRoundView.h */,
 				7E87B1D91AA943080029AB36 /* HRRoundView.m */,
 				7E87B1301AA1DFEE0029AB36 /* HRInputView.h */,
 				7E87B1311AA1DFEE0029AB36 /* HRInputView.m */,
 				7E87B1DC1AA946260029AB36 /* HRCameraView.h */,
 				7E87B1DD1AA946260029AB36 /* HRCameraView.m */,
+				7E0914DF1AAE936F00232638 /* HRBlockAlertView.h */,
+				7E0914E01AAE936F00232638 /* HRBlockAlertView.m */,
 			);
 			name = CustomView;
 			sourceTree = "<group>";
@@ -253,9 +273,13 @@
 			files = (
 				7E87B1DA1AA943080029AB36 /* HRRoundView.m in Sources */,
 				7E87B1D71AA941DB0029AB36 /* HRUtil.m in Sources */,
+				7E0914E11AAE936F00232638 /* HRBlockAlertView.m in Sources */,
+				7EC0EACF1AAD467E00D961FD /* HRChatViewController.m in Sources */,
 				7E87B1DE1AA946260029AB36 /* HRCameraView.m in Sources */,
+				7EC0EAD21AAD46C300D961FD /* HRChatCell.m in Sources */,
 				7E87B1131AA1DFD90029AB36 /* ViewController.m in Sources */,
 				7E87B1101AA1DFD90029AB36 /* AppDelegate.m in Sources */,
+				7EC0EAD51AAD578300D961FD /* HRRoundTextView.m in Sources */,
 				7E87B1321AA1DFEE0029AB36 /* HRInputView.m in Sources */,
 				7E87B10D1AA1DFD90029AB36 /* main.m in Sources */,
 			);

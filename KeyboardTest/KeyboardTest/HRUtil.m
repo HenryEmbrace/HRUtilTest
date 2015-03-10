@@ -41,7 +41,7 @@
     return newImage;
 }
 
-+(UIColor *)getColorWithString:(NSString *)colorString{
++(UIColor *)getColorFromString:(NSString *)colorString{
     long x;
     NSString *_str;
     //如果是八位
