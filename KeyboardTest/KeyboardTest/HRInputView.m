@@ -60,7 +60,7 @@
     //暂无表情图片，先用赞图片代替
     emojsArray = [NSMutableArray new];
     for(int i = 1;i <36 ; i++){
-        NSString *imgName = [NSString stringWithFormat:@"ee_%d.png",i];
+        NSString *imgName = [NSString stringWithFormat:@"ee_%d",i];
         [emojsArray addObject:imgName];
     }
     
