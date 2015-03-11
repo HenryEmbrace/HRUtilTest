@@ -10,5 +10,6 @@
 
 @interface HRChatCell : UITableViewCell
 
-@property(nonatomic,strong)NSString     *content;
+@property(nonatomic,strong)NSAttributedString     *attributeContent;
+@property(nonatomic,strong)NSString                 *content;
 @end

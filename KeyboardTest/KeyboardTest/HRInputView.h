@@ -13,7 +13,7 @@
 //发送的内容，最后需要调用HREmojiConvert进行一下转换得到图文混排的attributeText
 -(void)sendContent:(NSString *)content;
 -(void)sendAttributeContent:(NSAttributedString *)attributeString;
-
+-(void)inputViewFrameChanged;
 @end
 
 /*

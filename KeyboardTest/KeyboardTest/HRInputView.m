@@ -189,6 +189,8 @@
     }
     emojIsShow = !emojIsShow;
     [self setNeedsLayout];
+    if(_delegate && [_delegate respondsToSelector:@selector(inputViewFrameChanged)])
+        [_delegate inputViewFrameChanged];
 }
 
 -(CGFloat)emojHeight{
@@ -243,6 +245,8 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 10 - keyboardHeight - [self getInputViewHeight], [UIScreen mainScreen].bounds.size.width, [self getInputViewHeight] + 10);
     }];
+    if(_delegate && [_delegate respondsToSelector:@selector(inputViewFrameChanged)])
+        [_delegate inputViewFrameChanged];
 }
 
 -(void)handleKeyboardWillHideNote:(NSNotification *)notification{
@@ -256,6 +260,9 @@
         self.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 10- [self getInputViewHeight], [UIScreen mainScreen].bounds.size.width, [self getInputViewHeight] + 10);
         [inputView setFrame:CGRectMake(inputView.frame.origin.x, inputView.frame.origin.y, inputView.frame.size.width, [self getInputViewHeight])];
     }];
+    
+    if(_delegate && [_delegate respondsToSelector:@selector(inputViewFrameChanged)])
+        [_delegate inputViewFrameChanged];
 }
 
 -(void)dismissInput{

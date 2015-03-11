@@ -7,10 +7,10 @@
 //
 
 #import "HRChatCell.h"
-#import "HRRoundTextView.h"
 
 @interface HRChatCell(){
-    HRRoundTextView     *contentText;
+    UIImageView *cellBgview;
+    UILabel *contentLabel;
 }
 @end
 
@@ -37,21 +37,26 @@
 
 -(void)configCell{
     self.contentView.backgroundColor = [UIColor lightGrayColor];
-    contentText = [HRRoundTextView new];
-    contentText.backgroundColor = [UIColor grayColor];
-    contentText.editable = NO;
-    [self.contentView addSubview:contentText];
+    cellBgview = [UIImageView new];
+    [cellBgview setImage:[[UIImage imageNamed:@"cellbg"] stretchableImageWithLeftCapWidth:15 topCapHeight:15]];
+    cellBgview.contentMode = UIViewContentModeScaleToFill;
+    [self.contentView addSubview:cellBgview];
     
-}
-
--(void)layoutSubviews{
-    [contentText setFrame:CGRectMake(20, 5, [UIScreen mainScreen].bounds.size.width - 40, self.contentView.frame.size.height - 10)];
-    contentText.roundType = HRTextRoundTypeLeft;
+    
+    contentLabel = [[UILabel alloc] initWithFrame:self.contentView.frame];
+    contentLabel.numberOfLines = 0;
+    [self.contentView addSubview:contentLabel];
+    
 }
 
 -(void)setContent:(NSString *)content{
     _content = content;
-    contentText.text = _content;
+    contentLabel.text = content;
+}
+
+-(void)setAttributeContent:(NSAttributedString *)attributeContent{
+    _attributeContent = attributeContent;
+    contentLabel.attributedText = attributeContent;
 }
 
 @end
