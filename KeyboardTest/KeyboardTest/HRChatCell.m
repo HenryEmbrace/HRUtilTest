@@ -40,6 +40,7 @@
     cellBgview = [UIImageView new];
     [cellBgview setImage:[[UIImage imageNamed:@"cellbg"] stretchableImageWithLeftCapWidth:15 topCapHeight:15]];
     cellBgview.contentMode = UIViewContentModeScaleToFill;
+    [cellBgview setFrame:self.contentView.frame];
     [self.contentView addSubview:cellBgview];
     
     
