@@ -45,6 +45,7 @@
 		7E0915291AAFD5F200232638 /* ee_9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0915051AAFD5F200232638 /* ee_9@2x.png */; };
 		7E09152A1AAFD5F200232638 /* Emoj@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0915061AAFD5F200232638 /* Emoj@2x.png */; };
 		7E09152C1AAFDBDF00232638 /* cellbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E09152B1AAFDBDF00232638 /* cellbg@2x.png */; };
+		7E09159F1AB7036A00232638 /* HRDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E09159E1AB7036A00232638 /* HRDevice.m */; };
 		7E87B10D1AA1DFD90029AB36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B10C1AA1DFD90029AB36 /* main.m */; };
 		7E87B1101AA1DFD90029AB36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B10F1AA1DFD90029AB36 /* AppDelegate.m */; };
 		7E87B1131AA1DFD90029AB36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B1121AA1DFD90029AB36 /* ViewController.m */; };
@@ -111,6 +112,8 @@
 		7E0915051AAFD5F200232638 /* ee_9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ee_9@2x.png"; sourceTree = "<group>"; };
 		7E0915061AAFD5F200232638 /* Emoj@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Emoj@2x.png"; sourceTree = "<group>"; };
 		7E09152B1AAFDBDF00232638 /* cellbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellbg@2x.png"; sourceTree = "<group>"; };
+		7E09159D1AB7036A00232638 /* HRDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRDevice.h; sourceTree = "<group>"; };
+		7E09159E1AB7036A00232638 /* HRDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRDevice.m; sourceTree = "<group>"; };
 		7E87B1071AA1DFD90029AB36 /* KeyboardTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E87B10B1AA1DFD90029AB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E87B10C1AA1DFD90029AB36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -201,6 +204,15 @@
 			path = keyboardEmoj;
 			sourceTree = "<group>";
 		};
+		7E09159C1AB7034E00232638 /* DeviceUtil */ = {
+			isa = PBXGroup;
+			children = (
+				7E09159D1AB7036A00232638 /* HRDevice.h */,
+				7E09159E1AB7036A00232638 /* HRDevice.m */,
+			);
+			name = DeviceUtil;
+			sourceTree = "<group>";
+		};
 		7E87B0FE1AA1DFD90029AB36 = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +282,7 @@
 		7E87B1DB1AA9432F0029AB36 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				7E09159C1AB7034E00232638 /* DeviceUtil */,
 				7EC0EAD31AAD578300D961FD /* HRRoundTextView.h */,
 				7EC0EAD41AAD578300D961FD /* HRRoundTextView.m */,
 				7E87B1D81AA943080029AB36 /* HRRoundView.h */,
@@ -427,6 +440,7 @@
 				7E87B1DA1AA943080029AB36 /* HRRoundView.m in Sources */,
 				7E87B1D71AA941DB0029AB36 /* HRUtil.m in Sources */,
 				7E0914E11AAE936F00232638 /* HRBlockAlertView.m in Sources */,
+				7E09159F1AB7036A00232638 /* HRDevice.m in Sources */,
 				7EC0EACF1AAD467E00D961FD /* HRChatViewController.m in Sources */,
 				7E87B1DE1AA946260029AB36 /* HRCameraView.m in Sources */,
 				7EC0EAD21AAD46C300D961FD /* HRChatCell.m in Sources */,
