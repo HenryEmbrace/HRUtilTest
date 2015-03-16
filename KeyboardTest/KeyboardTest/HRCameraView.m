@@ -21,7 +21,7 @@
 -(id)init{
     self = [super init];
     if(self){
-        
+        [self setup];
     }
     return self;
 }
