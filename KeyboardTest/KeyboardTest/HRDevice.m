@@ -8,6 +8,9 @@
 
 #import "HRDevice.h"
 #import <sys/utsname.h>
+#include <sys/types.h>
+#include <sys/sysctl.h>
+
 
 static HRDevice     *instance = nil;
 @implementation HRDevice
@@ -85,9 +88,13 @@ static HRDevice     *instance = nil;
 
 - (NSString *)deviceModel
 {
-    struct utsname systemInfo;
-    uname(&systemInfo);
-    return [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+    size_t size;
+    sysctlbyname("hw.machine", NULL, &size, NULL, 0);
+    char *machine = malloc(size);
+    sysctlbyname("hw.machine", machine, &size, NULL, 0);
+    NSString *platform = [NSString stringWithCString:machine encoding:NSASCIIStringEncoding];
+    free(machine);
+    return platform;
 }
 
 @end

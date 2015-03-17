@@ -11,6 +11,22 @@
 
 @interface HRUtil : NSObject
 
+typedef void(^SaveVideoCompleted)(NSString *filePath);
+typedef void(^SaveVideoFailed)(NSError *error);
+
++(void)saveImagesToVideoWithImages:(NSArray *)paths
+                         completed:(SaveVideoCompleted)completed
+                         andFailed:(SaveVideoFailed)failedBlock;
+
++(void)saveImagesToVideoWithImages:(NSArray *)paths
+                      andAudioPath:(NSString *)audioPath
+                         completed:(SaveVideoCompleted)completed
+                         andFailed:(SaveVideoFailed)failedBlock;
+
++(void)convertVideoToGifWithVideo:(NSString *)videoPath
+                        completed:(SaveVideoCompleted)completed
+                        andFailed:(SaveVideoFailed)failedBlock;
+
 //compress image size
 +(NSData *)dataFromImageForUpload:(UIImage *)image;
 

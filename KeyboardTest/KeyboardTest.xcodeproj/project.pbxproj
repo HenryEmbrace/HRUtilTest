@@ -207,6 +207,8 @@
 		7E09159C1AB7034E00232638 /* DeviceUtil */ = {
 			isa = PBXGroup;
 			children = (
+				7E87B1D51AA941DB0029AB36 /* HRUtil.h */,
+				7E87B1D61AA941DB0029AB36 /* HRUtil.m */,
 				7E09159D1AB7036A00232638 /* HRDevice.h */,
 				7E09159E1AB7036A00232638 /* HRDevice.m */,
 			);
@@ -243,8 +245,6 @@
 				7E87B1171AA1DFD90029AB36 /* Images.xcassets */,
 				7E87B1191AA1DFD90029AB36 /* LaunchScreen.xib */,
 				7E87B10A1AA1DFD90029AB36 /* Supporting Files */,
-				7E87B1D51AA941DB0029AB36 /* HRUtil.h */,
-				7E87B1D61AA941DB0029AB36 /* HRUtil.m */,
 				7EC0EACD1AAD467E00D961FD /* HRChatViewController.h */,
 				7EC0EACE1AAD467E00D961FD /* HRChatViewController.m */,
 			);
