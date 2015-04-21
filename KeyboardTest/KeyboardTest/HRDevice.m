@@ -12,17 +12,17 @@
 #include <sys/sysctl.h>
 
 
-static HRDevice     *instance = nil;
+//static HRDevice     *instance = nil;
 @implementation HRDevice
 
-+(id)currentDevice{
-    if(!instance){
-        instance = [[HRDevice alloc] init];
-    }
-    return instance;
-}
+//+(id)currentDevice{
+//    if(!instance){
+//        instance = [[HRDevice alloc] init];
+//    }
+//    return instance;
+//}
 
--(HRDeviceType)getCurrentDeviceType{
++(HRDeviceType)getCurrentDeviceType{
     NSString *platForm = [self deviceModel];
     if([platForm isEqualToString:@"iPhone1,1"]){
         return HRDeviceTypeiPhone;
@@ -74,19 +74,19 @@ static HRDevice     *instance = nil;
     return HRDeviceTypeiPhone;
 }
 
--(NSString *)getSystemStringVersion{
++(NSString *)getSystemStringVersion{
     return [[UIDevice currentDevice] systemVersion];
 }
 
--(CGFloat)getSystemFloatVersion{
++(CGFloat)getSystemFloatVersion{
     return [[[UIDevice currentDevice] systemVersion] floatValue];
 }
 
--(CGSize)getScreenSize{
++(CGSize)getScreenSize{
     return [UIScreen mainScreen].bounds.size;
 }
 
-- (NSString *)deviceModel
++(NSString *)deviceModel
 {
     size_t size;
     sysctlbyname("hw.machine", NULL, &size, NULL, 0);

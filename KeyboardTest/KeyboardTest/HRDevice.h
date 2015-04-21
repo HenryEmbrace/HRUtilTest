@@ -34,10 +34,10 @@ typedef enum{
 
 @interface HRDevice : NSObject
 
-+(id)currentDevice;
--(HRDeviceType)getCurrentDeviceType;
--(CGSize)getScreenSize;
--(CGFloat)getSystemFloatVersion;
--(NSString *)getSystemStringVersion;
+//+(id)currentDevice;
++(HRDeviceType)getCurrentDeviceType;
++(CGSize)getScreenSize;
++(CGFloat)getSystemFloatVersion;
++(NSString *)getSystemStringVersion;
 
 @end
