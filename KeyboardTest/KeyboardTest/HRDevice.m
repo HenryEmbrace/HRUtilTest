@@ -15,13 +15,6 @@
 //static HRDevice     *instance = nil;
 @implementation HRDevice
 
-//+(id)currentDevice{
-//    if(!instance){
-//        instance = [[HRDevice alloc] init];
-//    }
-//    return instance;
-//}
-
 +(HRDeviceType)getCurrentDeviceType{
     NSString *platForm = [self deviceModel];
     if([platForm isEqualToString:@"iPhone1,1"]){
@@ -30,7 +23,7 @@
         return HRDeviceTypeiPhone3G;
     }else if([platForm isEqualToString:@"iPhone2,1"]){
         return HRDeviceTypeiPhone3GS;
-    }else if([platForm isEqualToString:@"iPhone3,1"] || [platForm isEqualToString:@"iPhone3,3"]){
+    }else if([platForm hasPrefix:@"iPhone3"]){
         //3.3 is Version iPhone that support CDMA
         return HRDeviceTypeiPhone4;
     }else if([platForm isEqualToString:@"iPhone4,1"]){
@@ -41,7 +34,7 @@
     }else if([platForm isEqualToString:@"iPhone5,3"] || [platForm isEqualToString:@"iPhone5,4"]){
         //5,3 CDMA & WCDMA,  5,4 is TD
         return HRDeviceTypeiPhone5c;
-    }else if([platForm isEqualToString:@"iPhone6,1"] || [platForm isEqualToString:@"iPhone6,2"]){
+    }else if([platForm hasPrefix:@"iPhone6"]){
         //6,1 is CDMA and 6,2 is global
         return HRDeviceTypeiPhone5S;
     }else if([platForm isEqualToString:@"iPhone7,1"]){
