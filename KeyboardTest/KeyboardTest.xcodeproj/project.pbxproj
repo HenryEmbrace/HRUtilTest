@@ -54,12 +54,15 @@
 		7E87B11B1AA1DFD90029AB36 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E87B1191AA1DFD90029AB36 /* LaunchScreen.xib */; };
 		7E87B1271AA1DFD90029AB36 /* KeyboardTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B1261AA1DFD90029AB36 /* KeyboardTestTests.m */; };
 		7E87B1321AA1DFEE0029AB36 /* HRInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B1311AA1DFEE0029AB36 /* HRInputView.m */; };
-		7E87B1D71AA941DB0029AB36 /* HRUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B1D61AA941DB0029AB36 /* HRUtil.m */; };
+		7E87B1D71AA941DB0029AB36 /* HRUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B1D61AA941DB0029AB36 /* HRUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7E87B1DA1AA943080029AB36 /* HRRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B1D91AA943080029AB36 /* HRRoundView.m */; };
 		7E87B1DE1AA946260029AB36 /* HRCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B1DD1AA946260029AB36 /* HRCameraView.m */; };
 		7EC0EACF1AAD467E00D961FD /* HRChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0EACE1AAD467E00D961FD /* HRChatViewController.m */; };
 		7EC0EAD21AAD46C300D961FD /* HRChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0EAD11AAD46C300D961FD /* HRChatCell.m */; };
 		7EC0EAD51AAD578300D961FD /* HRRoundTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0EAD41AAD578300D961FD /* HRRoundTextView.m */; };
+		7ED470A31AEE576E0067B4CE /* HRNetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED470A21AEE576E0067B4CE /* HRNetworkStatus.m */; };
+		7ED470A51AEE58FC0067B4CE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED470A41AEE58FC0067B4CE /* CoreTelephony.framework */; };
+		7ED470A81AEE59D50067B4CE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED470A71AEE59D50067B4CE /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +144,11 @@
 		7EC0EAD11AAD46C300D961FD /* HRChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChatCell.m; sourceTree = "<group>"; };
 		7EC0EAD31AAD578300D961FD /* HRRoundTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRRoundTextView.h; sourceTree = "<group>"; };
 		7EC0EAD41AAD578300D961FD /* HRRoundTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRRoundTextView.m; sourceTree = "<group>"; };
+		7ED470A11AEE576E0067B4CE /* HRNetworkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRNetworkStatus.h; sourceTree = "<group>"; };
+		7ED470A21AEE576E0067B4CE /* HRNetworkStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRNetworkStatus.m; sourceTree = "<group>"; };
+		7ED470A41AEE58FC0067B4CE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7ED470A61AEE59D50067B4CE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		7ED470A71AEE59D50067B4CE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ED470A51AEE58FC0067B4CE /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,10 +216,14 @@
 		7E09159C1AB7034E00232638 /* DeviceUtil */ = {
 			isa = PBXGroup;
 			children = (
+				7ED470A61AEE59D50067B4CE /* Reachability.h */,
+				7ED470A71AEE59D50067B4CE /* Reachability.m */,
 				7E87B1D51AA941DB0029AB36 /* HRUtil.h */,
 				7E87B1D61AA941DB0029AB36 /* HRUtil.m */,
 				7E09159D1AB7036A00232638 /* HRDevice.h */,
 				7E09159E1AB7036A00232638 /* HRDevice.m */,
+				7ED470A11AEE576E0067B4CE /* HRNetworkStatus.h */,
+				7ED470A21AEE576E0067B4CE /* HRNetworkStatus.m */,
 			);
 			name = DeviceUtil;
 			sourceTree = "<group>";
@@ -218,6 +231,7 @@
 		7E87B0FE1AA1DFD90029AB36 = {
 			isa = PBXGroup;
 			children = (
+				7ED470A41AEE58FC0067B4CE /* CoreTelephony.framework */,
 				7E87B1091AA1DFD90029AB36 /* KeyboardTest */,
 				7E87B1231AA1DFD90029AB36 /* KeyboardTestTests */,
 				7E87B1081AA1DFD90029AB36 /* Products */,
@@ -440,12 +454,14 @@
 				7E87B1DA1AA943080029AB36 /* HRRoundView.m in Sources */,
 				7E87B1D71AA941DB0029AB36 /* HRUtil.m in Sources */,
 				7E0914E11AAE936F00232638 /* HRBlockAlertView.m in Sources */,
+				7ED470A31AEE576E0067B4CE /* HRNetworkStatus.m in Sources */,
 				7E09159F1AB7036A00232638 /* HRDevice.m in Sources */,
 				7EC0EACF1AAD467E00D961FD /* HRChatViewController.m in Sources */,
 				7E87B1DE1AA946260029AB36 /* HRCameraView.m in Sources */,
 				7EC0EAD21AAD46C300D961FD /* HRChatCell.m in Sources */,
 				7E87B1131AA1DFD90029AB36 /* ViewController.m in Sources */,
 				7E87B1101AA1DFD90029AB36 /* AppDelegate.m in Sources */,
+				7ED470A81AEE59D50067B4CE /* Reachability.m in Sources */,
 				7EC0EAD51AAD578300D961FD /* HRRoundTextView.m in Sources */,
 				7E87B1321AA1DFEE0029AB36 /* HRInputView.m in Sources */,
 				7E87B10D1AA1DFD90029AB36 /* main.m in Sources */,
