@@ -387,9 +387,8 @@
 -(NSAttributedString *)getCustomEmojWithString:(NSString *)customEmojString withColor:(UIColor *)textColor{
     if(!customEmojString)
         return nil;
-    //NSString * pattern = @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]";
-    //NSString * pattern = @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5\\123~!@#$%^&*()_+<>?:,./;'，。、‘：“《》？~！@#￥%……（）]+\\]";
-    NSString * pattern = @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5\\123~!@#$%^&*()_+-|<>?:,./;'，。、‘：“《》？~！@#￥%……（）]+\\]";
+    
+    NSString * pattern = @"\\[[a-zA-Z0-9\\u4e00-\\u9fa5\\-\\123~!@#$%^&*()_+<>?:,./;'，。、‘：“《》？~！@#￥%……（）|]+\\]";
     NSError * error = nil;
     NSRegularExpression * re = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
     if (!re) {
