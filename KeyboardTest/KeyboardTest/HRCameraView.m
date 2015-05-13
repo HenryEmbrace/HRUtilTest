@@ -118,4 +118,15 @@
     return nil;
 }
 
+-(AVCaptureDevice *)backCamera{
+    NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+    for (AVCaptureDevice *device in devices) {
+        //if need the back camera, chane to AVCaptureDevicePositionBack
+        if ([device position] == AVCaptureDevicePositionBack) {
+            return device;
+        }
+    }
+    return nil;
+}
+
 @end
