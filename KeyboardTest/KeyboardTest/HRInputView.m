@@ -11,7 +11,7 @@
 @interface HRInputView()<UITextViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate>{
     UIButton    *emojButton;
     UIButton    *sendButton;
-    UITextView  *inputView;         //外部可以访问这个变量..
+    UITextView  *inputView;
     BOOL        emojIsShow;
     
     //标志键盘消失时是否需要移动view，仅限在表情时使用
