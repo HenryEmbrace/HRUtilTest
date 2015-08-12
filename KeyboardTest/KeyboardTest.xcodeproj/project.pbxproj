@@ -76,6 +76,7 @@
 		7EAEB4DA1B0F5CB000800B69 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAEB4D21B0F5CB000800B69 /* UIWebView+AFNetworking.m */; };
 		7EAEB4DE1B0F5D0100800B69 /* HRApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAEB4DD1B0F5D0100800B69 /* HRApiClient.m */; };
 		7EAEB4E11B12EFF000800B69 /* HRApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAEB4E01B12EFF000800B69 /* HRApiResponse.m */; };
+		7EC0797C1B7B3B440039E1D5 /* HRImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0797B1B7B3B440039E1D5 /* HRImageUtil.m */; };
 		7EC0EACF1AAD467E00D961FD /* HRChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0EACE1AAD467E00D961FD /* HRChatViewController.m */; };
 		7EC0EAD21AAD46C300D961FD /* HRChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0EAD11AAD46C300D961FD /* HRChatCell.m */; };
 		7EC0EAD51AAD578300D961FD /* HRRoundTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0EAD41AAD578300D961FD /* HRRoundTextView.m */; };
@@ -197,6 +198,8 @@
 		7EAEB4DD1B0F5D0100800B69 /* HRApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRApiClient.m; sourceTree = "<group>"; };
 		7EAEB4DF1B12EFF000800B69 /* HRApiResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRApiResponse.h; sourceTree = "<group>"; };
 		7EAEB4E01B12EFF000800B69 /* HRApiResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRApiResponse.m; sourceTree = "<group>"; };
+		7EC0797A1B7B3B440039E1D5 /* HRImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRImageUtil.h; sourceTree = "<group>"; };
+		7EC0797B1B7B3B440039E1D5 /* HRImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRImageUtil.m; sourceTree = "<group>"; };
 		7EC0EACD1AAD467E00D961FD /* HRChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatViewController.h; sourceTree = "<group>"; };
 		7EC0EACE1AAD467E00D961FD /* HRChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChatViewController.m; sourceTree = "<group>"; };
 		7EC0EAD01AAD46C300D961FD /* HRChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatCell.h; sourceTree = "<group>"; };
@@ -323,6 +326,8 @@
 				7E87B10A1AA1DFD90029AB36 /* Supporting Files */,
 				7EC0EACD1AAD467E00D961FD /* HRChatViewController.h */,
 				7EC0EACE1AAD467E00D961FD /* HRChatViewController.m */,
+				7EC0797A1B7B3B440039E1D5 /* HRImageUtil.h */,
+				7EC0797B1B7B3B440039E1D5 /* HRImageUtil.m */,
 			);
 			path = KeyboardTest;
 			sourceTree = "<group>";
@@ -605,6 +610,7 @@
 				7EAEB4DE1B0F5D0100800B69 /* HRApiClient.m in Sources */,
 				7EAEB4BA1B0F5CA600800B69 /* AFHTTPSessionManager.m in Sources */,
 				7EAEB4DA1B0F5CB000800B69 /* UIWebView+AFNetworking.m in Sources */,
+				7EC0797C1B7B3B440039E1D5 /* HRImageUtil.m in Sources */,
 				7E87B10D1AA1DFD90029AB36 /* main.m in Sources */,
 				7EAEB4C01B0F5CA600800B69 /* AFURLSessionManager.m in Sources */,
 			);
