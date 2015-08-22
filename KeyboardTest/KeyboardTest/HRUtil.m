@@ -84,7 +84,7 @@ static OSType pixelFormatType = kCVPixelFormatType_32ARGB;
             if(++frame >= [paths count] ){
                 [writerInput markAsFinished];
                 [videoWriter finishWritingWithCompletionHandler:^{
-//                    [self add];
+                    
                 }];
                 break;
             }
@@ -219,8 +219,7 @@ static OSType pixelFormatType = kCVPixelFormatType_32ARGB;
     NSString    *dealPath = @"";
     __block    NSError     *error = nil;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        
-        
+        //暂未实现方法
         dispatch_async(dispatch_get_main_queue(), ^{
             if (!error && completed) {
                 completed(dealPath);
@@ -232,6 +231,7 @@ static OSType pixelFormatType = kCVPixelFormatType_32ARGB;
         });
     });
 }
+
 +(NSData *)dataFromImageForUpload:(UIImage *)image{
     NSData  *data = UIImageJPEGRepresentation(image, 1);
     double compressQuality = (double)MEGA_BYTE/(CGFloat)data.length;
@@ -301,4 +301,31 @@ static OSType pixelFormatType = kCVPixelFormatType_32ARGB;
     
     return [UIColor colorWithRed:(float)r/255.0f green:(float)g/255.0f blue:(float)b/255.0f alpha:_alpha];
 }
+
+//获取本周第一天
++(NSDate *)getFirstDayOFcurrentWeek{
+    NSDate *today = [NSDate date];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *weekdayComponents =
+    [gregorian components:(NSCalendarUnitDay | NSCalendarUnitWeekday) fromDate:today];
+    NSInteger weekday = [weekdayComponents weekday];
+    
+    NSDate *firstDate = [today dateByAddingTimeInterval:60*60*24 * (-weekday+1)];
+    
+    return firstDate;
+}
+
+//获取本周最后一天
++(NSDate *)getLastDayOfCurrentWeek{
+    NSDate *today = [NSDate date];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *weekdayComponents =
+    [gregorian components:(NSCalendarUnitDay | NSCalendarUnitWeekday) fromDate:today];
+    NSInteger weekday = [weekdayComponents weekday];
+    
+    NSDate *firstDate = [today dateByAddingTimeInterval:60*60*24 * (7-weekday)];
+    
+    return firstDate;
+}
+
 @end

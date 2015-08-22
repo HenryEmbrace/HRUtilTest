@@ -76,7 +76,6 @@
 		7EAEB4DA1B0F5CB000800B69 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAEB4D21B0F5CB000800B69 /* UIWebView+AFNetworking.m */; };
 		7EAEB4DE1B0F5D0100800B69 /* HRApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAEB4DD1B0F5D0100800B69 /* HRApiClient.m */; };
 		7EAEB4E11B12EFF000800B69 /* HRApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAEB4E01B12EFF000800B69 /* HRApiResponse.m */; };
-		7EB535AD1B8328FC00094E65 /* HRTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EB535AC1B8328FC00094E65 /* HRTools.m */; };
 		7EC0797C1B7B3B440039E1D5 /* HRImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0797B1B7B3B440039E1D5 /* HRImageUtil.m */; };
 		7EC0EACF1AAD467E00D961FD /* HRChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0EACE1AAD467E00D961FD /* HRChatViewController.m */; };
 		7EC0EAD21AAD46C300D961FD /* HRChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0EAD11AAD46C300D961FD /* HRChatCell.m */; };
@@ -199,8 +198,6 @@
 		7EAEB4DD1B0F5D0100800B69 /* HRApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRApiClient.m; sourceTree = "<group>"; };
 		7EAEB4DF1B12EFF000800B69 /* HRApiResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRApiResponse.h; sourceTree = "<group>"; };
 		7EAEB4E01B12EFF000800B69 /* HRApiResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRApiResponse.m; sourceTree = "<group>"; };
-		7EB535AB1B8328FC00094E65 /* HRTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRTools.h; sourceTree = "<group>"; };
-		7EB535AC1B8328FC00094E65 /* HRTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRTools.m; sourceTree = "<group>"; };
 		7EC0797A1B7B3B440039E1D5 /* HRImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRImageUtil.h; sourceTree = "<group>"; };
 		7EC0797B1B7B3B440039E1D5 /* HRImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRImageUtil.m; sourceTree = "<group>"; };
 		7EC0EACD1AAD467E00D961FD /* HRChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatViewController.h; sourceTree = "<group>"; };
@@ -289,8 +286,6 @@
 				7E09159E1AB7036A00232638 /* HRDevice.m */,
 				7ED470A11AEE576E0067B4CE /* HRNetworkStatus.h */,
 				7ED470A21AEE576E0067B4CE /* HRNetworkStatus.m */,
-				7EB535AB1B8328FC00094E65 /* HRTools.h */,
-				7EB535AC1B8328FC00094E65 /* HRTools.m */,
 			);
 			name = DeviceUtil;
 			sourceTree = "<group>";
@@ -597,7 +592,6 @@
 				7E09159F1AB7036A00232638 /* HRDevice.m in Sources */,
 				7EC0EACF1AAD467E00D961FD /* HRChatViewController.m in Sources */,
 				7EAEB4D81B0F5CB000800B69 /* UIProgressView+AFNetworking.m in Sources */,
-				7EB535AD1B8328FC00094E65 /* HRTools.m in Sources */,
 				7EAEB4B91B0F5CA600800B69 /* AFHTTPRequestOperationManager.m in Sources */,
 				7E87B1DE1AA946260029AB36 /* HRCameraView.m in Sources */,
 				7EAEB4BC1B0F5CA600800B69 /* AFSecurityPolicy.m in Sources */,
