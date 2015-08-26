@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HRNetworkStatus.h"
+#import "HRDevice.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,9 @@
     // Override point for customization after application launch.
     HRNetworkType   type = [HRNetworkStatus currentNetworkStatus];
     NSLog(@"%d",type);
+    
+    HRDeviceType devicetype = [HRDevice getCurrentDeviceType];
+    
     return YES;
 }
 

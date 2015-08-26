@@ -62,6 +62,11 @@
         return HRDeviceTypeiPadAir2;
     }else if ([platForm hasPrefix:@"iPod"]){
         return HRDeviceTypeiPod;
+    }else{
+        //Xcode 6及以后模拟器为x86_64，之前版本为iPhone simulator之类
+        if([platForm isEqualToString:@"x86_64"]){
+            return HRDeviceTypeSimulator;
+        }
     }
     
     return HRDeviceTypeiPhone;

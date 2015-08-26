@@ -29,7 +29,8 @@ typedef enum{
     HRDeviceTypeiPadMini2,
     HRDeviceTypeiPadAir2,
     HRDeviceTypeiPadMini3,
-    HRDeviceTypeiPod
+    HRDeviceTypeiPod,
+    HRDeviceTypeSimulator
 }HRDeviceType;
 
 @interface HRDevice : NSObject
