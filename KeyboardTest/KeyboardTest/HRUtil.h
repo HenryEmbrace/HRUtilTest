@@ -60,7 +60,7 @@ typedef void(^SaveVideoFailed)(NSError *error);
 /**
  *  @author Henry
  *
- *  压缩图片到适合上传的大小
+ *  压缩图片到适合上传的大小,默认为150K左右
  *
  *  @param image 图片对象
  *
