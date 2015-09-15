@@ -52,10 +52,10 @@ typedef void(^SaveVideoFailed)(NSError *error);
  *  @param failedBlock 失败的回调
  */
 
-#warning 暂未实现此方法
-+(void)convertVideoToGifWithVideo:(NSString *)videoPath
-                        completed:(SaveVideoCompleted)completed
-                        andFailed:(SaveVideoFailed)failedBlock;
+//#warning 暂未实现此方法
+//+(void)convertVideoToGifWithVideo:(NSString *)videoPath
+//                        completed:(SaveVideoCompleted)completed
+//                        andFailed:(SaveVideoFailed)failedBlock;
 
 /**
  *  @author Henry
@@ -97,4 +97,11 @@ typedef void(^SaveVideoFailed)(NSError *error);
 
 //获取本周最后一天
 +(NSDate *)getLastDayOfCurrentWeek;
+
+//获取本机IP地址局域网内
++(NSString *)getLocalIPAddress;
+
+////获取网络IP地址
+//+(NSString *)getRemoteIPAddress;
+
 @end

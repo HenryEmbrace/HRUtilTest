@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HRNetworkStatus.h"
 #import "HRDevice.h"
+#import "HRUtil.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +23,11 @@
     HRNetworkType   type = [HRNetworkStatus currentNetworkStatus];
     NSLog(@"%d",type);
     
-    HRDeviceType devicetype = [HRDevice getCurrentDeviceType];
+    NSString *localIp = [HRUtil getLocalIPAddress];
+    NSLog(@"localIp: %@",localIp);
+    
+//    NSString *remoteIp = [HRUtil getRemoteIPAddress];
+//    NSLog(@"remoteIp: %@",remoteIp);
     
     return YES;
 }
