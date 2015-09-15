@@ -37,9 +37,9 @@
     }else if([platForm hasPrefix:@"iPhone6"]){
         //6,1 is CDMA and 6,2 is global
         return HRDeviceTypeiPhone5S;
-    }else if([platForm isEqualToString:@"iPhone7,1"]){
-        return HRDeviceTypeiPhone6;
     }else if([platForm isEqualToString:@"iPhone7,2"]){
+        return HRDeviceTypeiPhone6;
+    }else if([platForm isEqualToString:@"iPhone7,1"]){
         return HRDeviceTypeiPhone6Plus;
     }else if([platForm isEqualToString:@"iPad1,1"]){
         return HRDeviceTypeiPad1;
