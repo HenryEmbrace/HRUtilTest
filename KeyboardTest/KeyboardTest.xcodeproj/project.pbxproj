@@ -46,6 +46,7 @@
 		7E09152A1AAFD5F200232638 /* Emoj@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0915061AAFD5F200232638 /* Emoj@2x.png */; };
 		7E09152C1AAFDBDF00232638 /* cellbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E09152B1AAFDBDF00232638 /* cellbg@2x.png */; };
 		7E09159F1AB7036A00232638 /* HRDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E09159E1AB7036A00232638 /* HRDevice.m */; };
+		7E3977391BB0F3A6008415C3 /* HRBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3977381BB0F3A5008415C3 /* HRBaseModel.m */; settings = {ASSET_TAGS = (); }; };
 		7E87B10D1AA1DFD90029AB36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B10C1AA1DFD90029AB36 /* main.m */; };
 		7E87B1101AA1DFD90029AB36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B10F1AA1DFD90029AB36 /* AppDelegate.m */; };
 		7E87B1131AA1DFD90029AB36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B1121AA1DFD90029AB36 /* ViewController.m */; };
@@ -137,6 +138,8 @@
 		7E09152B1AAFDBDF00232638 /* cellbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellbg@2x.png"; sourceTree = "<group>"; };
 		7E09159D1AB7036A00232638 /* HRDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRDevice.h; sourceTree = "<group>"; };
 		7E09159E1AB7036A00232638 /* HRDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRDevice.m; sourceTree = "<group>"; };
+		7E3977371BB0F3A5008415C3 /* HRBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRBaseModel.h; sourceTree = "<group>"; };
+		7E3977381BB0F3A5008415C3 /* HRBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRBaseModel.m; sourceTree = "<group>"; };
 		7E87B1071AA1DFD90029AB36 /* KeyboardTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E87B10B1AA1DFD90029AB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E87B10C1AA1DFD90029AB36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -328,6 +331,8 @@
 				7EC0EACE1AAD467E00D961FD /* HRChatViewController.m */,
 				7EC0797A1B7B3B440039E1D5 /* HRImageUtil.h */,
 				7EC0797B1B7B3B440039E1D5 /* HRImageUtil.m */,
+				7E3977371BB0F3A5008415C3 /* HRBaseModel.h */,
+				7E3977381BB0F3A5008415C3 /* HRBaseModel.m */,
 			);
 			path = KeyboardTest;
 			sourceTree = "<group>";
@@ -586,6 +591,7 @@
 				7EAEB4D51B0F5CB000800B69 /* UIAlertView+AFNetworking.m in Sources */,
 				7E87B1D71AA941DB0029AB36 /* HRUtil.m in Sources */,
 				7E0914E11AAE936F00232638 /* HRBlockAlertView.m in Sources */,
+				7E3977391BB0F3A6008415C3 /* HRBaseModel.m in Sources */,
 				7ED470A31AEE576E0067B4CE /* HRNetworkStatus.m in Sources */,
 				7EAEB4BF1B0F5CA600800B69 /* AFURLResponseSerialization.m in Sources */,
 				7EAEB4BD1B0F5CA600800B69 /* AFURLConnectionOperation.m in Sources */,
