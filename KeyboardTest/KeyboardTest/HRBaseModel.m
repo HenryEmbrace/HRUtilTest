@@ -42,7 +42,7 @@
     }
 }
 
-//简单的数组类型
+//简单的数组类型，仅支持一层数据解析
 -(void)configArrayValue:(id)obj withKey:(NSString *)key{
     Class clazz = NSClassFromString(key);
     if(!clazz){
