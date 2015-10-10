@@ -10,6 +10,8 @@
 #import "HRInputView.h"
 #import "HRChatCell.h"
 
+#import "HRPostMenuView.h"
+
 @interface ViewController ()<HRBeacherInputDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     HRInputView *inputView;
@@ -25,9 +27,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    UIButton *showPost = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    showPost.backgroundColor = [UIColor grayColor];
+    [showPost setFrame:CGRectMake(0, 30, 80, 40)];
+    [showPost setTitle:@"发布动画" forState:UIControlStateNormal];
+    [showPost setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [self.view addSubview:showPost];
+    [showPost addTarget:self action:@selector(showMenu) forControlEvents:UIControlEventTouchUpInside];
+    
+    
     chatArray = [NSMutableArray new];
     
-    chatListTable = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+    chatListTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 80, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 80) style:UITableViewStyleGrouped];
     [chatListTable setContentInset:UIEdgeInsetsMake(0, 0, 40, 0)];
     chatListTable.delegate = self;
     chatListTable.dataSource = self;
@@ -41,6 +52,11 @@
     inputView = [HRInputView new];
     inputView.delegate = self;
     [self.view addSubview:inputView];
+}
+
+-(void)showMenu{
+    HRPostMenuView *menu = [[HRPostMenuView alloc] init];
+    [menu show];
 }
 
 - (void)didReceiveMemoryWarning {
