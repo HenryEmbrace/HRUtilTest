@@ -12,11 +12,16 @@
 
 #import "HRPostMenuView.h"
 
+#import "HRRoundSlider.h"
+
 @interface ViewController ()<HRBeacherInputDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     HRInputView *inputView;
     UITableView     *chatListTable;
     NSMutableArray  *chatArray;
+    
+    //环形slider
+    HRRoundSlider *slider;
 }
 @end
 
@@ -35,6 +40,13 @@
     [self.view addSubview:showPost];
     [showPost addTarget:self action:@selector(showMenu) forControlEvents:UIControlEventTouchUpInside];
     
+    
+    slider = [[HRRoundSlider alloc] initWithFrame:CGRectMake(200, 20, 60, 60)];
+    slider.progressWidth = 8;
+    slider.sliderColor = [UIColor blueColor];
+    slider.sliderRadius = 10;
+    slider.progressColor = [UIColor redColor];
+    [self.view addSubview:slider];
     
     chatArray = [NSMutableArray new];
     

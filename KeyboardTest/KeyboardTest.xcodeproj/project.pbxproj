@@ -66,6 +66,7 @@
 		7E54752A1BC9059A001AD28D /* menuBkg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E5475261BC9059A001AD28D /* menuBkg@3x.png */; settings = {ASSET_TAGS = (); }; };
 		7E54752B1BC9059A001AD28D /* rightArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E5475271BC9059A001AD28D /* rightArrow@2x.png */; settings = {ASSET_TAGS = (); }; };
 		7E54752C1BC9059A001AD28D /* rightArrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E5475281BC9059A001AD28D /* rightArrow@3x.png */; settings = {ASSET_TAGS = (); }; };
+		7E54752F1BCBB6EC001AD28D /* HRRoundSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E54752E1BCBB6EC001AD28D /* HRRoundSlider.m */; settings = {ASSET_TAGS = (); }; };
 		7E87B10D1AA1DFD90029AB36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B10C1AA1DFD90029AB36 /* main.m */; };
 		7E87B1101AA1DFD90029AB36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B10F1AA1DFD90029AB36 /* AppDelegate.m */; };
 		7E87B1131AA1DFD90029AB36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E87B1121AA1DFD90029AB36 /* ViewController.m */; };
@@ -153,6 +154,8 @@
 		7E5475261BC9059A001AD28D /* menuBkg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuBkg@3x.png"; sourceTree = "<group>"; };
 		7E5475271BC9059A001AD28D /* rightArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightArrow@2x.png"; sourceTree = "<group>"; };
 		7E5475281BC9059A001AD28D /* rightArrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightArrow@3x.png"; sourceTree = "<group>"; };
+		7E54752D1BCBB6EC001AD28D /* HRRoundSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRRoundSlider.h; sourceTree = "<group>"; };
+		7E54752E1BCBB6EC001AD28D /* HRRoundSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRRoundSlider.m; sourceTree = "<group>"; };
 		7E87B1071AA1DFD90029AB36 /* KeyboardTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E87B10B1AA1DFD90029AB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E87B10C1AA1DFD90029AB36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -388,6 +391,8 @@
 				7E0914E01AAE936F00232638 /* HRBlockAlertView.m */,
 				7EC0EAD01AAD46C300D961FD /* HRChatCell.h */,
 				7EC0EAD11AAD46C300D961FD /* HRChatCell.m */,
+				7E54752D1BCBB6EC001AD28D /* HRRoundSlider.h */,
+				7E54752E1BCBB6EC001AD28D /* HRRoundSlider.m */,
 			);
 			name = CustomView;
 			sourceTree = "<group>";
@@ -592,6 +597,7 @@
 				7EC0797C1B7B3B440039E1D5 /* HRImageUtil.m in Sources */,
 				7E5475071BC90079001AD28D /* HRPostMenuView.m in Sources */,
 				7E87B10D1AA1DFD90029AB36 /* main.m in Sources */,
+				7E54752F1BCBB6EC001AD28D /* HRRoundSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
