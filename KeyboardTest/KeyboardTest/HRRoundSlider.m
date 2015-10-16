@@ -31,8 +31,9 @@
     [tmpLayer setPath:ballBezierPath.CGPath];
     [tmpLayer setStrokeColor:_progressColor?_progressColor.CGColor:[UIColor blackColor].CGColor];
     [tmpLayer setFillColor:[UIColor clearColor].CGColor];
-    [tmpLayer setLineWidth:1];
+    [tmpLayer setLineWidth:_progressWidth];
     [self.layer insertSublayer:tmpLayer below:bgview.layer];
+    
     progressLayer = tmpLayer;
     
     [_flagView setCenter:ballBezierPath.currentPoint];
@@ -52,7 +53,7 @@
         
         bgview = [[UIView alloc] initWithFrame:self.frame];
         [self addSubview:bgview];
-        _progress = 0.3;
+        _progress = 1.0;
         
         _flagView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _sliderRadius*2, _sliderRadius*2)];
         _flagView.backgroundColor = [UIColor redColor];
@@ -88,21 +89,40 @@
 }
 
 -(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    CGPoint touchPt = [[touches anyObject] locationInView:self];
     CGPoint endPt = [[[touches allObjects] lastObject] locationInView:self];
-    if(endPt.x>0 && endPt.y>0 && endPt.x < self.frame.size.width && endPt.y < self.frame.size.height){
-        [_flagView setCenter:endPt];
-    }
-    if(CGRectContainsPoint(_flagView.frame, touchPt)){
-        NSLog(@"在响应范围内");
-        
-    }else{
-        NSLog(@"不在响应范围");
-    }
+    
+    [UIView animateWithDuration:0.05 animations:^{
+        [_flagView setCenter:[self getOccurPointByTouchPt:endPt]];
+    }];
 }
 
 -(CGPoint)getOccurPointByTouchPt:(CGPoint)touchPoint{
-    return CGPointMake(0, 0);
+    CGFloat lengthX = fabs(touchPoint.x - [self getRadius]);
+    CGFloat lengthY = fabs(touchPoint.y - [self getRadius]);
+    
+    CGFloat bigLength = sqrt(pow(lengthX,2)+pow(lengthY, 2));
+    CGFloat rate = [self getRadius]/bigLength;
+    
+    CGFloat addX = (touchPoint.x - [self getRadius])*rate;
+    CGFloat addY = (touchPoint.y - [self getRadius])*rate;
+    
+    if(addX > 0){
+        addX -= _progressWidth/2;
+    }else{
+        addX += _progressWidth/2;
+    }
+    
+    if(addY > 0){
+        addY -= _progressWidth/2;
+    }else{
+        addY += _progressWidth/2;
+    }
+    
+    return CGPointMake([self getRadius] + addX, [self getRadius] + addY);
 }
+
+//-(CGFloat)getAngelByPoint:(CGPoint)touchPoint{
+//
+//}
 
 @end

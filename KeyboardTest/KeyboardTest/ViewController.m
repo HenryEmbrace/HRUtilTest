@@ -42,9 +42,9 @@
     
     
     slider = [[HRRoundSlider alloc] initWithFrame:CGRectMake(200, 20, 60, 60)];
-    slider.progressWidth = 8;
+    slider.progressWidth = 6;
     slider.sliderColor = [UIColor blueColor];
-    slider.sliderRadius = 10;
+    slider.sliderRadius = 5;
     slider.progressColor = [UIColor redColor];
     [self.view addSubview:slider];
     
