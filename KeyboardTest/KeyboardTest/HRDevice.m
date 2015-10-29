@@ -17,6 +17,7 @@
 
 +(HRDeviceType)getCurrentDeviceType{
     NSString *platForm = [self deviceModel];
+    
     if([platForm isEqualToString:@"iPhone1,1"]){
         return HRDeviceTypeiPhone;
     }else if([platForm isEqualToString:@"iPhone1,2"]){
@@ -41,6 +42,10 @@
         return HRDeviceTypeiPhone6;
     }else if([platForm isEqualToString:@"iPhone7,1"]){
         return HRDeviceTypeiPhone6Plus;
+    }else if([platForm isEqualToString:@"iPhone8,1"]){
+        return HRDeviceTypeiPhone6s;
+    }else if([platForm isEqualToString:@"iPhone8,2"]){
+        return HRDeviceTypeiPhone6sPlus;
     }else if([platForm isEqualToString:@"iPad1,1"]){
         return HRDeviceTypeiPad1;
     }else if([platForm isEqualToString:@"iPad2,1"] || [platForm isEqualToString:@"iPad2,2"] || [platForm isEqualToString:@"iPad2,3"]){
@@ -70,6 +75,16 @@
     }
     
     return HRDeviceTypeiPhone;
+}
+
++(NSDictionary *)nameEnumDic{
+    NSMutableDictionary *enumDic = [NSMutableDictionary new];
+    NSArray *nameArray = @[@"iPhone",@"iPhone 3G",@"iPhone 3GS",@"iPhone 4",@"iPhone 4S",@"iPhone 5",@"iPhone 5c",@"iPhone 5s",@"iPhone 6",@"iPhone 6 Plus",@"iPhone 6s",@"iPhone 6s Plus",@"iPad 1",@"iPad 2",@"iPad 3",@"iPad 4",@"iPad Air",@"iPad Air2",@"iPad mini",@"iPad mini2",@"iPad mini3",@"iPod",@"iPhone Simulator"];
+    for(int i=0;i<21;i++){
+        [enumDic setObject:nameArray[i] forKey:@(i)];
+    }
+
+    return enumDic;
 }
 
 +(NSString *)getSystemStringVersion{

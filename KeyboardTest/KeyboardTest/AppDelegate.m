@@ -26,8 +26,9 @@
     NSString *localIp = [HRUtil getLocalIPAddress];
     NSLog(@"localIp: %@",localIp);
     
-//    NSString *remoteIp = [HRUtil getRemoteIPAddress];
-//    NSLog(@"remoteIp: %@",remoteIp);
+    HRDeviceType DeviceType = [HRDevice getCurrentDeviceType];
+    NSLog(@"Device Type Name:%@",[[HRDevice nameEnumDic] objectForKey:@(DeviceType)]);
+    
     
     return YES;
 }

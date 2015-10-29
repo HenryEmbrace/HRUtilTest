@@ -330,7 +330,7 @@ static OSType pixelFormatType = kCVPixelFormatType_32ARGB;
     return firstDate;
 }
 
-//获取本机IP
+//获取本机本地IP
 +(NSString *)getLocalIPAddress{
     NSString *address = @"error";
     struct ifaddrs *interfaces = NULL;
@@ -361,7 +361,7 @@ static OSType pixelFormatType = kCVPixelFormatType_32ARGB;
 }
 
 +(NSString *)getRemoteIPAddress{
-    NSURL *iPURL = [NSURL URLWithString:@"http://www.ip138.com"];
+    NSURL *iPURL = [NSURL URLWithString:@"http://www.0460.com/tools/internet/myip.aspx"];
     NSString *externalIP = @"";
     NSError *error = nil;
     NSString *theIpHtml = [NSString stringWithContentsOfURL:iPURL

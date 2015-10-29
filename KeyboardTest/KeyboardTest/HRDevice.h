@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-typedef enum{
+typedef NS_ENUM(NSInteger, HRDeviceType){
     HRDeviceTypeiPhone  =   0,
     HRDeviceTypeiPhone3G,
     HRDeviceTypeiPhone3GS,
@@ -20,23 +20,25 @@ typedef enum{
     HRDeviceTypeiPhone5S,
     HRDeviceTypeiPhone6,
     HRDeviceTypeiPhone6Plus,
+    HRDeviceTypeiPhone6s,
+    HRDeviceTypeiPhone6sPlus,
     HRDeviceTypeiPad1,
     HRDeviceTypeiPad2,
     HRDeviceTypeiPad3,
-    HRDeviceTypeiPadMini,
     HRDeviceTypeiPad4,
     HRDeviceTypeiPadAir,
-    HRDeviceTypeiPadMini2,
     HRDeviceTypeiPadAir2,
+    HRDeviceTypeiPadMini,
+    HRDeviceTypeiPadMini2,
     HRDeviceTypeiPadMini3,
     HRDeviceTypeiPod,
     HRDeviceTypeSimulator
-}HRDeviceType;
+};
 
 @interface HRDevice : NSObject
 
-//+(id)currentDevice;
 +(HRDeviceType)getCurrentDeviceType;
++(NSDictionary *)nameEnumDic;
 +(CGSize)getScreenSize;
 +(CGFloat)getSystemFloatVersion;
 +(NSString *)getSystemStringVersion;
