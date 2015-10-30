@@ -37,7 +37,7 @@ static OSType pixelFormatType = kCVPixelFormatType_32ARGB;
     
     long long timeString = [[NSDate date] timeIntervalSince1970];
     NSString *fileName = [NSString stringWithFormat:@"video%llu.mp4",timeString];
-    NSString    *videoPath = [NSHomeDirectory() stringByAppendingPathComponent:fileName];
+    NSString    *videoPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"] stringByAppendingPathComponent:fileName];
     unlink([videoPath UTF8String]);
     
     __block    NSError     *error = nil;
