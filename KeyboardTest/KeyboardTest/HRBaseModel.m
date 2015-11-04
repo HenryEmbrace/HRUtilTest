@@ -6,6 +6,9 @@
 //  Copyright © 2015年 ZhangHeng. All rights reserved.
 //
 
+//model解析时，类的前缀，可以为空
+#define classPrefix @"HR"
+
 #import "HRBaseModel.h"
 
 @implementation HRBaseModel
@@ -33,7 +36,7 @@
 
 //简单的只有一层的数据对象型属性
 -(void)configDicValue:(id)obj withKey:(NSString *)key{
-    Class clazz = NSClassFromString(key);
+    Class clazz = NSClassFromString([NSString stringWithFormat:@"%@%@",classPrefix,key.capitalizedString]);
     if(clazz){
         id myObj = [[clazz alloc] initWithDictionary:obj];
         [self setValue:myObj forKeyPath:key];
@@ -44,7 +47,7 @@
 
 //简单的数组类型，仅支持一层数据解析
 -(void)configArrayValue:(id)obj withKey:(NSString *)key{
-    Class clazz = NSClassFromString(key);
+    Class clazz = NSClassFromString([NSString stringWithFormat:@"%@%@",classPrefix,key.capitalizedString]);
     if(!clazz){
         NSLog(@"%@ undeclare",key);
     }else{
