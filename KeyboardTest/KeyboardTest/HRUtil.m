@@ -392,4 +392,77 @@ static OSType pixelFormatType = kCVPixelFormatType_32ARGB;
 }
 
 
++(void)converVideoDimissionWithFilePath:(NSString *)videoPath
+                          andOutputPath:(NSString *)outputPath
+                                cutType:(int)type
+                         withCompletion:(void (^)(void))completion{
+    //获取原视频
+    AVAsset *asset = [AVAsset assetWithURL:[NSURL fileURLWithPath:videoPath]];
+    
+    //创建视频轨道信息
+    AVAssetTrack *clipVideoTrack = [[asset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
+    
+    //创建视频分辨率等一些设置
+    AVMutableVideoComposition* videoComposition = [AVMutableVideoComposition videoComposition];
+    videoComposition.frameDuration = CMTimeMake(1, 30);
+    //设置渲染的宽高分辨率,均为视频的自然高度
+    videoComposition.renderSize = CGSizeMake(clipVideoTrack.naturalSize.height, clipVideoTrack.naturalSize.height);
+    
+    //创建视频的构造信息
+    AVMutableVideoCompositionInstruction *instruction = [AVMutableVideoCompositionInstruction videoCompositionInstruction];
+    instruction.timeRange = CMTimeRangeMake(kCMTimeZero, CMTimeMakeWithSeconds(60, 30));
+    
+    AVMutableVideoCompositionLayerInstruction* transformer = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:clipVideoTrack];
+    
+    CGAffineTransform t1;
+    switch (type) {
+        case 0:{
+            //将裁剪后保留的区域设置为视频顶部
+            t1 = CGAffineTransformMakeTranslation(clipVideoTrack.naturalSize.height, 0 );
+        }
+            break;
+        case 1:{
+            //将裁剪后保留的区域设置为视频中间部分
+            t1 = CGAffineTransformMakeTranslation(clipVideoTrack.naturalSize.height, -(clipVideoTrack.naturalSize.width - clipVideoTrack.naturalSize.height) /2 );
+        }
+        case 2:{
+            //将裁剪后保留的区域设置为视频下面部分
+            t1 = CGAffineTransformMakeTranslation(clipVideoTrack.naturalSize.height, (clipVideoTrack.naturalSize.width - clipVideoTrack.naturalSize.height) /2);
+        }
+            break;
+        default:{
+            //将裁剪后保留的区域设置为视频中间部分
+            t1 = CGAffineTransformMakeTranslation(clipVideoTrack.naturalSize.height, -(clipVideoTrack.naturalSize.width - clipVideoTrack.naturalSize.height) /2 );
+        }
+            break;
+    }
+    
+    //保证视频为垂直正确的方向
+    CGAffineTransform t2 = CGAffineTransformRotate(t1, M_PI_2);
+    
+    CGAffineTransform finalTransform = t2;
+    [transformer setTransform:finalTransform atTime:kCMTimeZero];
+    
+    //先添加tranform层的构造信息，再添加分辨率信息
+    instruction.layerInstructions = [NSArray arrayWithObject:transformer];
+    videoComposition.instructions = [NSArray arrayWithObject: instruction];
+    
+    //移除掉之前所存在的视频信息
+    [[NSFileManager defaultManager]  removeItemAtURL:[NSURL fileURLWithPath:outputPath] error:nil];
+    
+    //开始进行导出视频
+    AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:asset presetName:AVAssetExportPresetHighestQuality] ;
+    exporter.videoComposition = videoComposition;
+    exporter.outputURL = [NSURL fileURLWithPath:outputPath];
+    exporter.outputFileType = AVFileTypeQuickTimeMovie;
+    
+    [exporter exportAsynchronouslyWithCompletionHandler:^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //导出完成后执行回调
+            if(completion)
+                completion();
+        });
+    }];
+}
+
 @end

@@ -9,6 +9,7 @@
 //model解析时，类的前缀，可以为空
 #define classPrefix @"HR"
 
+#import <objc/runtime.h>
 #import "HRBaseModel.h"
 
 @implementation HRBaseModel
@@ -28,6 +29,7 @@
                 [self configArrayValue:obj withKey:key];
             }else{
                 [self setValue:obj forKeyPath:key];
+                //objc_setAssociatedObject(self, (__bridge const void *)(key), obj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
             }
         }
     }

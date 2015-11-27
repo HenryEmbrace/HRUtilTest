@@ -104,7 +104,20 @@ typedef void(^SaveVideoFailed)(NSError *error);
 //获取本机IP地址局域网内
 +(NSString *)getLocalIPAddress;
 
-////获取网络IP地址
-//+(NSString *)getRemoteIPAddress;
+/**
+ *  @author Henry
+ *
+ *  将视频裁剪为正方形区域显示
+ *
+ *  @param videoPath  原视频路径
+ *  @param outputPath 输出视频路径
+ *  @param type       裁剪方式  0:裁剪取上半部分  1.裁剪后取中间部分  2.裁剪后取下部分
+ *
+ *  @param completion 完成回调
+ */
++(void)converVideoDimissionWithFilePath:(NSString *)videoPath
+                          andOutputPath:(NSString *)outputPath
+                                cutType:(int)type
+                         withCompletion:(void(^)(void))completion;
 
 @end

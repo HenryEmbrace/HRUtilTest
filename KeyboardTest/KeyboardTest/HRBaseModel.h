@@ -12,4 +12,6 @@
 
 -(id)initWithDictionary:(NSDictionary *)dictionary;
 
+//-(NSDictionary *)arrayClassNameDics;
+
 @end
