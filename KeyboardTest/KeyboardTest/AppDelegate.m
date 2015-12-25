@@ -29,6 +29,12 @@
     HRDeviceType DeviceType = [HRDevice getCurrentDeviceType];
     NSLog(@"Device Type Name:%@",[[HRDevice nameEnumDic] objectForKey:@(DeviceType)]);
     
+    NSString *string = @"测试下有没有中文字符 ohohoh";
+    if([HRUtil stringContainsChinesCharacters:string]){
+        NSLog(@"chinese");
+    }else{
+        NSLog(@"no chinese");
+    }
     
     return YES;
 }

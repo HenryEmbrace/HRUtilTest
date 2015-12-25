@@ -20,6 +20,17 @@ typedef void(^SaveVideoFailed)(NSError *error);
 /**
  *  @author Henry
  *
+ *  检查字符串是否包含中文字符
+ *
+ *  @param string 被检测的字符串
+ *
+ *  @return 是否包含中文
+ */
++(BOOL)stringContainsChinesCharacters:(NSString *)string;
+
+/**
+ *  @author Henry
+ *
  *  将图片数组合成一段视频
  *
  *  @param paths       路径的数组
