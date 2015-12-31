@@ -10,6 +10,7 @@
 #import "HRNetworkStatus.h"
 #import "HRDevice.h"
 #import "HRUtil.h"
+#import "NSString+Util.h"
 
 @interface AppDelegate ()
 
@@ -29,11 +30,20 @@
     HRDeviceType DeviceType = [HRDevice getCurrentDeviceType];
     NSLog(@"Device Type Name:%@",[[HRDevice nameEnumDic] objectForKey:@(DeviceType)]);
     
-    NSString *string = @"测试下有没有中文字符 ohohoh";
-    if([HRUtil stringContainsChinesCharacters:string]){
+    NSString *string = @"ohohoh";
+    if([string stringContainsChinesCharacters]){
         NSLog(@"chinese");
     }else{
         NSLog(@"no chinese");
+    }
+    
+    NSString *testCN = @"我看看hahahaha位置是哪里";
+    NSArray *cns = [testCN getChineseCharactersContains];
+    NSLog(@"中文字符是%@",cns);
+    
+    NSString *emoj = @"😂😱😭😘😳😒😏😄😔😍😉☺😜😁";
+    if([emoj stringContainsEmoji]){
+        NSLog(@"有emoji串");
     }
     
     return YES;

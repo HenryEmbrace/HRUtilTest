@@ -20,25 +20,6 @@ static OSType pixelFormatType = kCVPixelFormatType_32ARGB;
 
 @implementation HRUtil
 
-static const uint32_t HANZI_START_CODEPOINT = 0x4E00;
-static const uint32_t HANZI_END_CODEPOINT = 0x9FFF;
-
-static inline int isHanzi(uint32_t cp) {
-    return (HANZI_START_CODEPOINT <= cp && cp <= HANZI_END_CODEPOINT);
-}
-
-+(BOOL)stringContainsChinesCharacters:(NSString *)string{
-    const uint32_t *cp = (const uint32_t *)([string cStringUsingEncoding:NSUTF32LittleEndianStringEncoding]);
-    NSUInteger length = [string length];
-    for (NSUInteger i = 0; i < length; i++) {
-        //单个字符如果是中文，此处如果想要替换  就在这里替换或者删，不过建议是如果不是中文就用个mutableString append一下 取最后的值
-        if (isHanzi(cp[i])){
-            return YES;
-        }
-    }
-    return NO;
-}
-
 +(void)saveImagesToVideoWithImages:(NSArray *)paths completed:(SaveVideoCompleted)completed andFailed:(SaveVideoFailed)failedBlock{
     [self saveImagesToVideoWithImages:paths
                          andAudioPath:nil
