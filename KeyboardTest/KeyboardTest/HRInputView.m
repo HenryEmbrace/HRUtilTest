@@ -25,7 +25,9 @@
 
 @implementation HRInputView
 
-
++(NSAttributedString *)getEmojiStringFromPureString:(NSString *)content withTextColor:(UIColor *)color{
+    return [[self new] getCustomEmojWithString:content withColor:color?color:[UIColor blackColor]];
+}
 
 
 -(void)startInput{
@@ -364,11 +366,8 @@
     long arrayIndex = btn.tag;
     NSString *emojStr = [emojsTextArray objectAtIndex:arrayIndex];
     [inputView setText:[inputView.text stringByAppendingString:emojStr]];
-    
     [self scrollToCaretInTextView:inputView animated:NO];
-    
     [self textViewDidChange:inputView];
-    
 }
 
 -(CGFloat)getCollectionWidth{

@@ -47,6 +47,14 @@
 		7E09152C1AAFDBDF00232638 /* cellbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E09152B1AAFDBDF00232638 /* cellbg@2x.png */; };
 		7E09159F1AB7036A00232638 /* HRDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E09159E1AB7036A00232638 /* HRDevice.m */; };
 		7E23BC121C34BD7C005711B0 /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E23BC111C34BD7C005711B0 /* NSString+Util.m */; };
+		7E23BC361C38DB96005711B0 /* HRChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E23BC351C38DB96005711B0 /* HRChatMessage.m */; };
+		7E23BC3B1C38E6F6005711B0 /* HRChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E23BC3A1C38E6F6005711B0 /* HRChatCell.m */; };
+		7E23BC3E1C38E737005711B0 /* HRChatTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E23BC3D1C38E737005711B0 /* HRChatTextCell.m */; };
+		7E23BC411C38E746005711B0 /* HRChatImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E23BC401C38E746005711B0 /* HRChatImageCell.m */; };
+		7E23BC441C38E755005711B0 /* HRChatAudioCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E23BC431C38E755005711B0 /* HRChatAudioCell.m */; };
+		7E23BC471C38E768005711B0 /* HRChatWebcontentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E23BC461C38E768005711B0 /* HRChatWebcontentCell.m */; };
+		7E23BC4A1C38E77F005711B0 /* HRChatUnknowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E23BC491C38E77F005711B0 /* HRChatUnknowCell.m */; };
+		7E23BC4D1C38EB6A005711B0 /* HRChatVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E23BC4C1C38EB6A005711B0 /* HRChatVideoCell.m */; };
 		7E3977391BB0F3A6008415C3 /* HRBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3977381BB0F3A5008415C3 /* HRBaseModel.m */; };
 		7E5475071BC90079001AD28D /* HRPostMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5475051BC90079001AD28D /* HRPostMenuView.m */; };
 		7E5475171BC9051E001AD28D /* closeMenu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E5475091BC9051D001AD28D /* closeMenu@2x.png */; };
@@ -83,7 +91,6 @@
 		7EAEB4E11B12EFF000800B69 /* HRApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAEB4E01B12EFF000800B69 /* HRApiResponse.m */; };
 		7EC0797C1B7B3B440039E1D5 /* HRImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0797B1B7B3B440039E1D5 /* HRImageUtil.m */; };
 		7EC0EACF1AAD467E00D961FD /* HRChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0EACE1AAD467E00D961FD /* HRChatViewController.m */; };
-		7EC0EAD21AAD46C300D961FD /* HRChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0EAD11AAD46C300D961FD /* HRChatCell.m */; };
 		7EC0EAD51AAD578300D961FD /* HRRoundTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC0EAD41AAD578300D961FD /* HRRoundTextView.m */; };
 		7ED470A31AEE576E0067B4CE /* HRNetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED470A21AEE576E0067B4CE /* HRNetworkStatus.m */; };
 		7ED470A51AEE58FC0067B4CE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED470A41AEE58FC0067B4CE /* CoreTelephony.framework */; };
@@ -136,6 +143,23 @@
 		7E09159E1AB7036A00232638 /* HRDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRDevice.m; sourceTree = "<group>"; };
 		7E23BC101C34BD7C005711B0 /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
 		7E23BC111C34BD7C005711B0 /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
+		7E23BC341C38DB96005711B0 /* HRChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatMessage.h; sourceTree = "<group>"; };
+		7E23BC351C38DB96005711B0 /* HRChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChatMessage.m; sourceTree = "<group>"; };
+		7E23BC371C38DD08005711B0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7E23BC391C38E6F6005711B0 /* HRChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatCell.h; sourceTree = "<group>"; };
+		7E23BC3A1C38E6F6005711B0 /* HRChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChatCell.m; sourceTree = "<group>"; };
+		7E23BC3C1C38E737005711B0 /* HRChatTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatTextCell.h; sourceTree = "<group>"; };
+		7E23BC3D1C38E737005711B0 /* HRChatTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChatTextCell.m; sourceTree = "<group>"; };
+		7E23BC3F1C38E746005711B0 /* HRChatImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatImageCell.h; sourceTree = "<group>"; };
+		7E23BC401C38E746005711B0 /* HRChatImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChatImageCell.m; sourceTree = "<group>"; };
+		7E23BC421C38E755005711B0 /* HRChatAudioCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatAudioCell.h; sourceTree = "<group>"; };
+		7E23BC431C38E755005711B0 /* HRChatAudioCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChatAudioCell.m; sourceTree = "<group>"; };
+		7E23BC451C38E768005711B0 /* HRChatWebcontentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatWebcontentCell.h; sourceTree = "<group>"; };
+		7E23BC461C38E768005711B0 /* HRChatWebcontentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChatWebcontentCell.m; sourceTree = "<group>"; };
+		7E23BC481C38E77F005711B0 /* HRChatUnknowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatUnknowCell.h; sourceTree = "<group>"; };
+		7E23BC491C38E77F005711B0 /* HRChatUnknowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChatUnknowCell.m; sourceTree = "<group>"; };
+		7E23BC4B1C38EB6A005711B0 /* HRChatVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatVideoCell.h; sourceTree = "<group>"; };
+		7E23BC4C1C38EB6A005711B0 /* HRChatVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChatVideoCell.m; sourceTree = "<group>"; };
 		7E3977371BB0F3A5008415C3 /* HRBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRBaseModel.h; sourceTree = "<group>"; };
 		7E3977381BB0F3A5008415C3 /* HRBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRBaseModel.m; sourceTree = "<group>"; };
 		7E5475051BC90079001AD28D /* HRPostMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRPostMenuView.m; sourceTree = "<group>"; };
@@ -191,8 +215,6 @@
 		7EC0797B1B7B3B440039E1D5 /* HRImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRImageUtil.m; sourceTree = "<group>"; };
 		7EC0EACD1AAD467E00D961FD /* HRChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatViewController.h; sourceTree = "<group>"; };
 		7EC0EACE1AAD467E00D961FD /* HRChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChatViewController.m; sourceTree = "<group>"; };
-		7EC0EAD01AAD46C300D961FD /* HRChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChatCell.h; sourceTree = "<group>"; };
-		7EC0EAD11AAD46C300D961FD /* HRChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChatCell.m; sourceTree = "<group>"; };
 		7EC0EAD31AAD578300D961FD /* HRRoundTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRRoundTextView.h; sourceTree = "<group>"; };
 		7EC0EAD41AAD578300D961FD /* HRRoundTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRRoundTextView.m; sourceTree = "<group>"; };
 		7ED470A11AEE576E0067B4CE /* HRNetworkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRNetworkStatus.h; sourceTree = "<group>"; };
@@ -295,6 +317,36 @@
 			name = Category;
 			sourceTree = "<group>";
 		};
+		7E23BC331C38DB5A005711B0 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				7E23BC341C38DB96005711B0 /* HRChatMessage.h */,
+				7E23BC351C38DB96005711B0 /* HRChatMessage.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		7E23BC381C38E6E9005711B0 /* ChatCell */ = {
+			isa = PBXGroup;
+			children = (
+				7E23BC391C38E6F6005711B0 /* HRChatCell.h */,
+				7E23BC3A1C38E6F6005711B0 /* HRChatCell.m */,
+				7E23BC3C1C38E737005711B0 /* HRChatTextCell.h */,
+				7E23BC3D1C38E737005711B0 /* HRChatTextCell.m */,
+				7E23BC3F1C38E746005711B0 /* HRChatImageCell.h */,
+				7E23BC401C38E746005711B0 /* HRChatImageCell.m */,
+				7E23BC421C38E755005711B0 /* HRChatAudioCell.h */,
+				7E23BC431C38E755005711B0 /* HRChatAudioCell.m */,
+				7E23BC451C38E768005711B0 /* HRChatWebcontentCell.h */,
+				7E23BC461C38E768005711B0 /* HRChatWebcontentCell.m */,
+				7E23BC481C38E77F005711B0 /* HRChatUnknowCell.h */,
+				7E23BC491C38E77F005711B0 /* HRChatUnknowCell.m */,
+				7E23BC4B1C38EB6A005711B0 /* HRChatVideoCell.h */,
+				7E23BC4C1C38EB6A005711B0 /* HRChatVideoCell.m */,
+			);
+			path = ChatCell;
+			sourceTree = "<group>";
+		};
 		7E5475081BC9051D001AD28D /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +395,8 @@
 		7E87B1091AA1DFD90029AB36 /* KeyboardTest */ = {
 			isa = PBXGroup;
 			children = (
+				7E23BC381C38E6E9005711B0 /* ChatCell */,
+				7E23BC331C38DB5A005711B0 /* model */,
 				7E23BC0F1C34BD58005711B0 /* Category */,
 				7EAEB4DB1B0F5CCC00800B69 /* Network */,
 				7E87B1DB1AA9432F0029AB36 /* CustomView */,
@@ -360,6 +414,7 @@
 				7EC0797B1B7B3B440039E1D5 /* HRImageUtil.m */,
 				7E3977371BB0F3A5008415C3 /* HRBaseModel.h */,
 				7E3977381BB0F3A5008415C3 /* HRBaseModel.m */,
+				7E23BC371C38DD08005711B0 /* PrefixHeader.pch */,
 			);
 			path = KeyboardTest;
 			sourceTree = "<group>";
@@ -409,8 +464,6 @@
 				7E87B1DD1AA946260029AB36 /* HRCameraView.m */,
 				7E0914DF1AAE936F00232638 /* HRBlockAlertView.h */,
 				7E0914E01AAE936F00232638 /* HRBlockAlertView.m */,
-				7EC0EAD01AAD46C300D961FD /* HRChatCell.h */,
-				7EC0EAD11AAD46C300D961FD /* HRChatCell.m */,
 				7E54752D1BCBB6EC001AD28D /* HRRoundSlider.h */,
 				7E54752E1BCBB6EC001AD28D /* HRRoundSlider.m */,
 			);
@@ -599,25 +652,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E87B1DA1AA943080029AB36 /* HRRoundView.m in Sources */,
+				7E23BC471C38E768005711B0 /* HRChatWebcontentCell.m in Sources */,
+				7E23BC3B1C38E6F6005711B0 /* HRChatCell.m in Sources */,
 				7E87B1D71AA941DB0029AB36 /* HRUtil.m in Sources */,
 				7E0914E11AAE936F00232638 /* HRBlockAlertView.m in Sources */,
+				7E23BC441C38E755005711B0 /* HRChatAudioCell.m in Sources */,
 				7E3977391BB0F3A6008415C3 /* HRBaseModel.m in Sources */,
 				7ED470A31AEE576E0067B4CE /* HRNetworkStatus.m in Sources */,
 				7E09159F1AB7036A00232638 /* HRDevice.m in Sources */,
 				7EC0EACF1AAD467E00D961FD /* HRChatViewController.m in Sources */,
 				7E87B1DE1AA946260029AB36 /* HRCameraView.m in Sources */,
 				7E23BC121C34BD7C005711B0 /* NSString+Util.m in Sources */,
-				7EC0EAD21AAD46C300D961FD /* HRChatCell.m in Sources */,
+				7E23BC361C38DB96005711B0 /* HRChatMessage.m in Sources */,
 				7E87B1131AA1DFD90029AB36 /* ViewController.m in Sources */,
 				7E87B1101AA1DFD90029AB36 /* AppDelegate.m in Sources */,
 				7ED470A81AEE59D50067B4CE /* Reachability.m in Sources */,
+				7E23BC4D1C38EB6A005711B0 /* HRChatVideoCell.m in Sources */,
 				7EC0EAD51AAD578300D961FD /* HRRoundTextView.m in Sources */,
 				7E61DDB21BD09D1100BF3734 /* GTMBase64.m in Sources */,
 				7EAEB4E11B12EFF000800B69 /* HRApiResponse.m in Sources */,
 				7E87B1321AA1DFEE0029AB36 /* HRInputView.m in Sources */,
+				7E23BC3E1C38E737005711B0 /* HRChatTextCell.m in Sources */,
 				7EAEB4DE1B0F5D0100800B69 /* HRApiClient.m in Sources */,
+				7E23BC411C38E746005711B0 /* HRChatImageCell.m in Sources */,
 				7EC0797C1B7B3B440039E1D5 /* HRImageUtil.m in Sources */,
 				7E5475071BC90079001AD28D /* HRPostMenuView.m in Sources */,
+				7E23BC4A1C38E77F005711B0 /* HRChatUnknowCell.m in Sources */,
 				7E87B10D1AA1DFD90029AB36 /* main.m in Sources */,
 				7E54752F1BCBB6EC001AD28D /* HRRoundSlider.m in Sources */,
 			);
@@ -729,6 +789,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KeyboardTest/PrefixHeader.pch";
 				INFOPLIST_FILE = KeyboardTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.henry.$(PRODUCT_NAME:rfc1034identifier)";
@@ -744,6 +806,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KeyboardTest/PrefixHeader.pch";
 				INFOPLIST_FILE = KeyboardTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.henry.$(PRODUCT_NAME:rfc1034identifier)";

@@ -61,7 +61,6 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     HRChatCell  *cell = [tableView dequeueReusableCellWithIdentifier:CHAT_CELL];
-    cell.content = @"测试信息，测试界面流畅度，仅此而已................fuck.............shit";
     
     
     return cell;

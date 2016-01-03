@@ -26,6 +26,9 @@
 
 //初始出现时是否需要隐藏，如不隐藏则会出现在底部，如隐藏，发送和取消发送后会自动隐藏键盘
 @property(nonatomic,assign)BOOL     needHide;
+
++(NSAttributedString *)getEmojiStringFromPureString:(NSString *)content withTextColor:(UIColor *)color;
+
 //取消掉键盘的响应
 -(void)dismissInput;
 

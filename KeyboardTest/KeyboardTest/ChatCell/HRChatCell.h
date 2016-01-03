@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Masonry/Masonry.h>
+#import "HRChatMessage.h"
 
 @interface HRChatCell : UITableViewCell
 
-@property(nonatomic,strong)NSAttributedString     *attributeContent;
-@property(nonatomic,strong)NSString                 *content;
+@property(nonatomic,strong)HRChatMessage *message;
+@property(nonatomic,strong)UIImageView  *avator;
+
+-(void)configCell;
+
 @end
