@@ -29,14 +29,13 @@
                 [self configArrayValue:obj withKey:key];
             }else{
                 [self setValue:obj forKeyPath:key];
-                //objc_setAssociatedObject(self, (__bridge const void *)(key), obj, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
             }
         }
     }
     return self;
 }
 
-//简单的只有一层的数据对象型属性
+//解析数据对象型属性
 -(void)configDicValue:(id)obj withKey:(NSString *)key{
     Class clazz = NSClassFromString([NSString stringWithFormat:@"%@%@",classPrefix,key.capitalizedString]);
     if(clazz){
@@ -47,7 +46,7 @@
     }
 }
 
-//简单的数组类型，仅支持一层数据解析
+//解析数组类型
 -(void)configArrayValue:(id)obj withKey:(NSString *)key{
     Class clazz = NSClassFromString([NSString stringWithFormat:@"%@%@",classPrefix,key.capitalizedString]);
     if(!clazz){
