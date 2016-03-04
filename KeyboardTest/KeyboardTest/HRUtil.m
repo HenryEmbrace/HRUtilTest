@@ -425,6 +425,7 @@ static OSType pixelFormatType = kCVPixelFormatType_32ARGB;
             //将裁剪后保留的区域设置为视频中间部分
             t1 = CGAffineTransformMakeTranslation(clipVideoTrack.naturalSize.height, -(clipVideoTrack.naturalSize.width - clipVideoTrack.naturalSize.height) /2 );
         }
+            break;
         case 2:{
             //将裁剪后保留的区域设置为视频下面部分
             t1 = CGAffineTransformMakeTranslation(clipVideoTrack.naturalSize.height, (clipVideoTrack.naturalSize.width - clipVideoTrack.naturalSize.height) /2);
