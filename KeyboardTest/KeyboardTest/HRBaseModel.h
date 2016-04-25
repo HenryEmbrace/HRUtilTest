@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HRBaseModel : NSObject
+@interface HRBaseModel : NSObject<NSCoding>
 
 -(id)initWithDictionary:(NSDictionary *)dictionary;
 
-//-(NSDictionary *)arrayClassNameDics;
 
 @end

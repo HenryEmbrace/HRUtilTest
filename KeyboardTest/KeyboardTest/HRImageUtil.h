@@ -20,7 +20,7 @@
 //按比例压缩图片
 +(UIImage *)getImageCompressBy:(float)compress andOrigalImage:(UIImage *)oriImage;
 
-+(UIImage *)drawTextOnImage:(UIImage *)bgImage atRect:(CGRect)rect withString:(NSString *)string;
+//+(UIImage *)drawTextOnImage:(UIImage *)bgImage atRect:(CGRect)rect withString:(NSString *)string;
 
 
 @end
