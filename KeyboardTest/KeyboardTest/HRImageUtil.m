@@ -69,4 +69,25 @@
     return newImage;
 }
 
++(UIImage *)drawTextOnImage:(UIImage *)bgImage atRect:(CGRect)rect withString:(NSString *)string{
+    UIFont *font = [UIFont boldSystemFontOfSize:20];
+    CGSize fontSize = [string sizeWithAttributes:@{NSFontAttributeName : 10}];
+    CGSize imageSize = CGSizeMake(fontSize.width + imageWidth + 10, imageWidth);
+    UIImage *headImage = [HRImageUtil imageWithImage:head scaledToSize:imageSize];
+    
+    //开始混合绘图
+    UIGraphicsBeginImageContext(imageSize);
+    [headImage drawInRect:CGRectMake(0, 0, imageSize.width, imageSize.height)];
+    
+    NSMutableAttributedString* attString = [[NSMutableAttributedString alloc] initWithString:text];
+    NSRange range = NSMakeRange(0, [attString length]);
+    [attString addAttribute:NSFontAttributeName value:font range:range];
+    [attString addAttribute:NSForegroundColorAttributeName value:color range:range];
+    [attString drawInRect:CGRectMake(imageWidth, imageWidth/2 -fontSize.height/2, fontSize.width, fontSize.height)];
+    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
 @end
