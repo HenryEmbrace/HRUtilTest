@@ -25,7 +25,7 @@
 
 +(UIImage *)getImageCompressBy:(float)compress andOrigalImage:(UIImage *)oriImage{
     CGSize oriSize = oriImage.size;
-    CGSize toSize = CGSizeMake(oriSize.width, oriSize.height);
+    CGSize toSize = CGSizeMake(oriSize.width*compress, oriSize.height*compress);
     NSData  *data = UIImageJPEGRepresentation(oriImage, compress);
     UIImage *retImage = [UIImage imageWithData:data];
     
