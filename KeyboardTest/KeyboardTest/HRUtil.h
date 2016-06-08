@@ -101,9 +101,6 @@ typedef void(^SaveVideoFailed)(NSError *error);
 //获取本周最后一天
 +(NSDate *)getLastDayOfCurrentWeek;
 
-//获取本机IP地址局域网内
-+(NSString *)getLocalIPAddress;
-
 /**
  *  @author Henry
  *

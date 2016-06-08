@@ -38,6 +38,8 @@ typedef NS_ENUM(NSInteger, HRDeviceType){
 @interface HRDevice : NSObject
 
 +(HRDeviceType)getCurrentDeviceType;
+//获取本机IP地址局域网内
++(NSString *)getLocalIPAddress;
 +(NSDictionary *)nameEnumDic;
 +(CGSize)getScreenSize;
 +(CGFloat)getSystemFloatVersion;

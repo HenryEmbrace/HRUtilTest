@@ -330,66 +330,36 @@ static OSType pixelFormatType = kCVPixelFormatType_32ARGB;
     return firstDate;
 }
 
-//获取本机本地IP
-+(NSString *)getLocalIPAddress{
-    NSString *address = @"error";
-    struct ifaddrs *interfaces = NULL;
-    struct ifaddrs *temp_addr = NULL;
-    int success = 0;
-    // retrieve the current interfaces - returns 0 on success
-    success = getifaddrs(&interfaces);
-    if (success == 0) {
-        // Loop through linked list of interfaces
-        temp_addr = interfaces;
-        while(temp_addr != NULL) {
-            if(temp_addr->ifa_addr->sa_family == AF_INET) {
-                // Check if interface is en0 which is the wifi connection on the iPhone
-                if([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"]) {
-                    // Get NSString from C String
-                    address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
-                    
-                }
-                
-            }
-            
-            temp_addr = temp_addr->ifa_next;
-        }
-    }
-    // Free memory
-    freeifaddrs(interfaces);
-    return address;
-}
-
-+(NSString *)getRemoteIPAddress{
-    NSURL *iPURL = [NSURL URLWithString:@"http://www.0460.com/tools/internet/myip.aspx"];
-    NSString *externalIP = @"";
-    NSError *error = nil;
-    NSString *theIpHtml = [NSString stringWithContentsOfURL:iPURL
-                                                   encoding:NSUTF8StringEncoding error:&error];
-    if (!error) {
-        NSScanner *theScanner;
-        NSString *text = nil;
-        theScanner = [NSScanner scannerWithString:theIpHtml];
-        while ([theScanner isAtEnd] == NO) {
-            // find start of tag
-            [theScanner scanUpToString:@"<" intoString:NULL] ;
-            // find end of tag
-            [theScanner scanUpToString:@">" intoString:&text] ;
-            // replace the found tag with a space
-            //(you can filter multi-spaces out later if you wish)
-            theIpHtml = [theIpHtml stringByReplacingOccurrencesOfString:
-                         [NSString stringWithFormat:@"%@>", text] withString:@" "] ;
-            NSArray    *ipItemsArray = [theIpHtml componentsSeparatedByString:@" "];
-            NSInteger an_Integer=[ipItemsArray indexOfObject:@"Address:"];
-            externalIP =[ipItemsArray objectAtIndex: ++an_Integer];
-        }
-        return externalIP;
-    } else {
-        NSLog(@"Oops... g %ld, %@",(long)[error code],[error localizedDescription]);
-        return @"";
-    }
-    return externalIP;
-}
+//+(NSString *)getRemoteIPAddress{
+//    NSURL *iPURL = [NSURL URLWithString:@"http://www.0460.com/tools/internet/myip.aspx"];
+//    NSString *externalIP = @"";
+//    NSError *error = nil;
+//    NSString *theIpHtml = [NSString stringWithContentsOfURL:iPURL
+//                                                   encoding:NSUTF8StringEncoding error:&error];
+//    if (!error) {
+//        NSScanner *theScanner;
+//        NSString *text = nil;
+//        theScanner = [NSScanner scannerWithString:theIpHtml];
+//        while ([theScanner isAtEnd] == NO) {
+//            // find start of tag
+//            [theScanner scanUpToString:@"<" intoString:NULL] ;
+//            // find end of tag
+//            [theScanner scanUpToString:@">" intoString:&text] ;
+//            // replace the found tag with a space
+//            //(you can filter multi-spaces out later if you wish)
+//            theIpHtml = [theIpHtml stringByReplacingOccurrencesOfString:
+//                         [NSString stringWithFormat:@"%@>", text] withString:@" "] ;
+//            NSArray    *ipItemsArray = [theIpHtml componentsSeparatedByString:@" "];
+//            NSInteger an_Integer=[ipItemsArray indexOfObject:@"Address:"];
+//            externalIP =[ipItemsArray objectAtIndex: ++an_Integer];
+//        }
+//        return externalIP;
+//    } else {
+//        NSLog(@"Oops... g %ld, %@",(long)[error code],[error localizedDescription]);
+//        return @"";
+//    }
+//    return externalIP;
+//}
 
 
 +(void)converVideoDimissionWithFilePath:(NSString *)videoPath
