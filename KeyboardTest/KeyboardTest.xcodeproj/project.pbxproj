@@ -95,6 +95,7 @@
 		7ED470A31AEE576E0067B4CE /* HRNetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED470A21AEE576E0067B4CE /* HRNetworkStatus.m */; };
 		7ED470A51AEE58FC0067B4CE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED470A41AEE58FC0067B4CE /* CoreTelephony.framework */; };
 		7ED470A81AEE59D50067B4CE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED470A71AEE59D50067B4CE /* Reachability.m */; };
+		C0192D421D597C3600660951 /* NSData+imageFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = C0192D411D597C3600660951 /* NSData+imageFormat.m */; };
 		C9F24D42912BCA6BB7B104FC /* libPods-KeyboardTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCAE80954EADEC2A216B21CA /* libPods-KeyboardTest.a */; };
 /* End PBXBuildFile section */
 
@@ -224,6 +225,8 @@
 		7ED470A71AEE59D50067B4CE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		95978A69A35832095FBF573C /* Pods-KeyboardTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyboardTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyboardTest/Pods-KeyboardTest.release.xcconfig"; sourceTree = "<group>"; };
 		BCAE80954EADEC2A216B21CA /* libPods-KeyboardTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KeyboardTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0192D401D597C3600660951 /* NSData+imageFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+imageFormat.h"; sourceTree = "<group>"; };
+		C0192D411D597C3600660951 /* NSData+imageFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+imageFormat.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +316,8 @@
 			children = (
 				7E23BC101C34BD7C005711B0 /* NSString+Util.h */,
 				7E23BC111C34BD7C005711B0 /* NSString+Util.m */,
+				C0192D401D597C3600660951 /* NSData+imageFormat.h */,
+				C0192D411D597C3600660951 /* NSData+imageFormat.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -654,6 +659,7 @@
 				7E87B1DA1AA943080029AB36 /* HRRoundView.m in Sources */,
 				7E23BC471C38E768005711B0 /* HRChatWebcontentCell.m in Sources */,
 				7E23BC3B1C38E6F6005711B0 /* HRChatCell.m in Sources */,
+				C0192D421D597C3600660951 /* NSData+imageFormat.m in Sources */,
 				7E87B1D71AA941DB0029AB36 /* HRUtil.m in Sources */,
 				7E0914E11AAE936F00232638 /* HRBlockAlertView.m in Sources */,
 				7E23BC441C38E755005711B0 /* HRChatAudioCell.m in Sources */,
