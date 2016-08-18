@@ -12,6 +12,8 @@
 #import "HRUtil.h"
 #import "NSString+Util.h"
 
+#import "testModel.h"
+
 @interface AppDelegate ()
 
 @end
@@ -21,30 +23,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    HRNetworkType   type = [HRNetworkStatus currentNetworkStatus];
-    NSLog(@"%d",type);
-    
-    NSString *localIp = [HRUtil getLocalIPAddress];
-    NSLog(@"localIp: %@",localIp);
-    
-    HRDeviceType DeviceType = [HRDevice getCurrentDeviceType];
-    NSLog(@"Device Type Name:%@",[[HRDevice nameEnumDic] objectForKey:@(DeviceType)]);
-    
-    NSString *string = @"ohohoh";
-    if([string stringContainsChinesCharacters]){
-        NSLog(@"chinese");
-    }else{
-        NSLog(@"no chinese");
-    }
-    
-    NSString *testCN = @"我看看hahahaha位置是哪里";
-    NSArray *cns = [testCN getChineseCharactersContains];
-    NSLog(@"中文字符是%@",cns);
-    
-    NSString *emoj = @"😂😱😭😘😳😒😏😄😔😍😉☺😜😁";
-    if([emoj stringContainsEmoji]){
-        NSLog(@"有emoji串");
-    }
     
     return YES;
 }

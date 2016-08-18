@@ -28,17 +28,23 @@
                 [self configArrayValue:obj withKey:key];
             }else{
                 objc_property_t property = class_getProperty([self class], key.UTF8String);
-                const char * type = property_getName(property);
-                NSString * typeString = [NSString stringWithUTF8String:type];
-                NSArray * attributes = [typeString componentsSeparatedByString:@","];
-                NSString * typeAttribute = [attributes objectAtIndex:0];
-                NSString * propertyType = [typeAttribute substringFromIndex:1];
-                const char * rawPropertyType = [propertyType UTF8String];
+                NSString* propertyTypeName=  [[NSString alloc] initWithCString:property_getAttributes(property) encoding:NSUTF8StringEncoding];
+                
+                NSLog(@"type name %@",propertyTypeName);
                 
                 //根据声明的属性类型处理，一切以声明的类型为准进行转model
                 //如果是数字型的
-                if (strcmp(rawPropertyType, @encode(float)) == 0){
-                    //it's a float
+                if ([propertyTypeName hasPrefix:@"Tf"] || [propertyTypeName hasPrefix:@"Td"]){
+                    //it's a float,double,CGFloat
+                    if([obj isKindOfClass:[NSNumber class]]){
+                        [self setValue:obj forKeyPath:key];
+                    }else if([obj isKindOfClass:[NSString class]]){
+                        [self setValue:@([obj doubleValue]) forKey:key];
+                    }else{
+                        NSLog(@"type error ");
+                    }
+                }else if([propertyTypeName hasPrefix:@"Ti"]){
+                    //it is int
                     if([obj isKindOfClass:[NSNumber class]]){
                         [self setValue:obj forKeyPath:key];
                     }else if([obj isKindOfClass:[NSString class]]){
@@ -46,19 +52,17 @@
                     }else{
                         NSLog(@"type error ");
                     }
-                }else if(strcmp(rawPropertyType, @encode(int)) == 0){
+                }else if([propertyTypeName hasPrefix:@"Tq"]){
+                    //long, long long, NSIntger
                     if([obj isKindOfClass:[NSNumber class]]){
                         [self setValue:obj forKeyPath:key];
                     }else if([obj isKindOfClass:[NSString class]]){
-                        [self setValue:@([obj floatValue]) forKey:key];
+                        [self setValue:@([obj longLongValue]) forKey:key];
                     }else{
                         NSLog(@"type error ");
                     }
-                }else if (strcmp(rawPropertyType, @encode(id)) == 0) {
-                    //其它类型稍后处理
-                    [self setValue:[NSString stringWithFormat:@"%d",[obj intValue]] forKey:key];
-                } else {
-                    // String型
+                }else if ([propertyTypeName hasPrefix:@"T@"]) {
+                    //it is string
                     if([obj isKindOfClass:[NSNumber class]]){
                         [self setValue:[NSString stringWithFormat:@"%d",[obj intValue]] forKeyPath:key];
                     }else if([obj isKindOfClass:[NSString class]]){
@@ -66,6 +70,9 @@
                     }else{
                         NSLog(@"type error ");
                     }
+                } else {
+                    //other types, may never run here as json can only be string dic and array
+                    [self setValue:[NSString stringWithFormat:@"%d",[obj intValue]] forKey:key];
                 }
             }
         }
