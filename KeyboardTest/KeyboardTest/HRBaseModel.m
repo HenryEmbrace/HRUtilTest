@@ -28,12 +28,16 @@
                 [self configArrayValue:obj withKey:key];
             }else{
                 objc_property_t property = class_getProperty([self class], key.UTF8String);
+                if(!property){
+                    //propertyNotExist
+                    [self setValue:obj forKeyPath:key];
+                    return;
+                }
                 NSString* propertyTypeName=  [[NSString alloc] initWithCString:property_getAttributes(property) encoding:NSUTF8StringEncoding];
                 
                 NSLog(@"type name %@",propertyTypeName);
                 
                 //根据声明的属性类型处理，一切以声明的类型为准进行转model
-                //如果是数字型的
                 if ([propertyTypeName hasPrefix:@"Tf"] || [propertyTypeName hasPrefix:@"Td"]){
                     //it's a float,double,CGFloat
                     if([obj isKindOfClass:[NSNumber class]]){
