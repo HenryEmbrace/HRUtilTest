@@ -12,8 +12,6 @@
 #import "HRUtil.h"
 #import "NSString+Util.h"
 
-#import "testModel.h"
-
 @interface AppDelegate ()
 
 @end
