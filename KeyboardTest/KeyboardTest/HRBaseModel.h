@@ -12,5 +12,6 @@
 
 -(id)initWithDictionary:(NSDictionary *)dictionary;
 
+-(NSString *)jsonString;
 
 @end
