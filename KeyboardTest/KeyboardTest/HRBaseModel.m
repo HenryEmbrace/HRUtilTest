@@ -107,8 +107,8 @@
                 NSDictionary *jsonDic = [self getJsonDicWithObject:subObj withName:key];
                 [dic setValue:jsonDic forKey:key];
             }
-        }else{
-            //自定义model对象型
+        }else if([object isKindOfClass:[HRBaseModel class]]){
+            //自定义model对象型,需要继承baseModel的类
             NSDictionary *jsonDic = [self getJsonDicWithObject:object withName:key];
             [dic setValue:jsonDic forKey:key];
         }
