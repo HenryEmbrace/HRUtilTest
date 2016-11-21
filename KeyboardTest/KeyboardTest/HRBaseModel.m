@@ -111,6 +111,8 @@
             //自定义model对象型,需要继承baseModel的类
             NSDictionary *jsonDic = [self getJsonDicWithObject:object withName:key];
             [dic setValue:jsonDic forKey:key];
+        }else{
+            NSLog(@"%@ %@",NSStringFromClass([object class]),object);
         }
     }
     

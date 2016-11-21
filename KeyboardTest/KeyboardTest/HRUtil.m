@@ -86,13 +86,20 @@ static OSType pixelFormatType = kCVPixelFormatType_32ARGB;
             if(++frame >= [paths count] ){
                 [writerInput markAsFinished];
                 [videoWriter finishWritingWithCompletionHandler:^{
-                    
+                    [HRUtil addAudioToFileAtPath:videoPath andAudioPath:audioPath Success:^(NSString *filePath) {
+                        if(completed){
+                            completed(filePath);
+                        }
+                    } failed:^(NSError *error) {
+                        if(failedBlock)
+                            failedBlock(error);
+                    }];
                 }];
                 break;
             }
             
             UIImage *info = [UIImage imageWithContentsOfFile:[paths objectAtIndex:frame]];
-            CVPixelBufferRef buffer = (__bridge CVPixelBufferRef)([self pixelBufferFromCGImage:info.CGImage size:frameSize]);
+            CVPixelBufferRef buffer = [HRUtil pixelBufferFromCGImage:info.CGImage size:frameSize];
             if (buffer){
                 if(![adaptor appendPixelBuffer:buffer withPresentationTime:CMTimeMake(frame,24)]){
                     if(failedBlock)
@@ -108,7 +115,7 @@ static OSType pixelFormatType = kCVPixelFormatType_32ARGB;
     }];
 }
 
--(CVPixelBufferRef)pixelBufferFromCGImage:(CGImageRef)image size:(CGSize)size{
++(CVPixelBufferRef)pixelBufferFromCGImage:(CGImageRef)image size:(CGSize)size{
     CGSize frameSize = CGSizeMake(CGImageGetWidth(image), CGImageGetHeight(image));
     NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
                              @YES, kCVPixelBufferCGImageCompatibilityKey,
@@ -152,7 +159,7 @@ static OSType pixelFormatType = kCVPixelFormatType_32ARGB;
 
 
 //向无声视频文件中加入声音
--(void)addAudioToFileAtPath:(NSString *)vidoPath andAudioPath:(NSString *)audioPath Success:(SaveVideoCompleted)successBlock failed:(SaveVideoFailed)failedBlock{
++(void)addAudioToFileAtPath:(NSString *)vidoPath andAudioPath:(NSString *)audioPath Success:(SaveVideoCompleted)successBlock failed:(SaveVideoFailed)failedBlock{
     AVMutableComposition* mixComposition = [AVMutableComposition composition];
     
     NSURL* audio_inputFileUrl = [NSURL fileURLWithPath:audioPath];
